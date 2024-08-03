@@ -1,0 +1,56 @@
+.background {
+  --background: #2055f4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.header ion-button {
+  height: 60px;
+  width: 60px;
+  color: #2c6975;
+}
+
+.header ion-icon {
+  font-size: 2rem;
+}
+
+.card {
+  height: 75%;
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 0%;
+  border-radius: 3rem 3rem 0 0;
+  padding: 2rem;
+}
+
+.logo {
+  position: absolute;
+  top: -6.5rem;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  border: none;
+  z-index: 0;
+}
+
+form {
+  margin-top: 10rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+ion-button {
+  margin-top: 1rem;
+  --button-background-color: #9F8151 !important;
+}

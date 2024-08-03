@@ -1,0 +1,80 @@
+.white-color {
+  background-color: #fff; /* white background */
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+  z-index: 1;
+}
+
+.swiper-slide ion-card {
+  margin: 0; /* Remove default margins */
+  background-color: white; /* Set background to white */
+}
+
+.swiper-slide ion-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Set background to white */
+  height: 200px; /* Adjust height as needed */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.swiper-container-wrapper {
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+.swiper-button-prev, .swiper-button-next {
+  display: none;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.icon-scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.icon-wrapper {
+  margin-right: 20px;
+  text-align: center;
+  scroll-snap-align: start;
+  width: calc(100% / 3); /* Adjust the width to show 3 icons */
+}
+
+.icon-wrapper ion-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.icon-wrapper p {
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+ion-content,
+ion-header,
+ion-toolbar,
+ion-title,
+ion-tab-bar {
+  --background: white;
+  --color: black; /* Set text color to black */
+  padding: 0 !important; /* Remove any default padding */
+}
