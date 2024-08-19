@@ -29,8 +29,16 @@ const routes: Routes = [
   },
   { 
     path: '', 
-    redirectTo: 'login', 
+    redirectTo: 'onboarding', 
     pathMatch: 'full' 
+  },
+  {
+    path: 'product-selected',
+    loadChildren: () => import('./product-selected/product-selected.module').then( m => m.ProductSelectedPageModule)
+  },
+  {
+    path: 'onboarding',
+    loadChildren: () => import('./onboarding/onboarding.module').then( m => m.OnboardingPageModule)
   }
 ];
 

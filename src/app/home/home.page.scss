@@ -45,3 +45,43 @@ ion-content {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
 }
+
+.list-header{
+    font-weight: 700;
+    color:#515151;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+app-header {
+    position: relative;
+    background-color: #ffffff;
+    z-index: 10;
+  }
+
+.top-space{
+    padding-top:4rem;
+}
+
+.top-space-refresher{
+    padding-top:6rem;
+}
+  
+.center-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+ion-refresher {
+    --spinner-size: 50px; /* Adjust spinner size if needed */
+}
+  

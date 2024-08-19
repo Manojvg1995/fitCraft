@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit , Output , EventEmitter } from '@angular/core';
 import { Category } from 'src/app/models/Category';
 
 @Component({
@@ -9,4 +9,10 @@ import { Category } from 'src/app/models/Category';
 export class CategoryItemComponent{
 
   @Input() item!: Category;
+
+  @Output() selectedCategoryEvent = new EventEmitter<Category>();
+
+  selectedCategoryItem(item: Category) {
+    this.selectedCategoryEvent.emit(item);
+  }
 }

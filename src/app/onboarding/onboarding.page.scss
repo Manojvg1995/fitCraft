@@ -1,0 +1,38 @@
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  --background: #3880ff; /* Customize your button color here */
+}
+
+ 

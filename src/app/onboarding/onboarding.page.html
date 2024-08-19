@@ -1,0 +1,25 @@
+<ion-content>
+  <!-- Test with a single video without Swiper -->
+  <div *ngIf="showPlayButton" class="center-content">
+    <p (click)="playVideo()">Let's Begin</p>
+  </div>
+
+  <div *ngIf="!showPlayButton" class="center-content">
+    <video *ngIf="status===1" #video1 muted playsinline>
+      <source src="assets/onboarding/onboard1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video *ngIf="status===2" #video2 muted playsinline>
+      <source src="assets/onboarding/onboard2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video *ngIf="status===3" #video3 muted playsinline>
+      <source src="assets/onboarding/onboard3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Next button -->
+    <ion-button (click)="nextSlide()" expand="block" shape="round" class="next-button">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

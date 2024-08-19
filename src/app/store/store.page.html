@@ -1,7 +1,20 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">store</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="card-grid">
+    <ion-card class="product-card" *ngFor="let product of products">
+      <ion-img [src]="product.image" alt="{{product.title}}" class="product-image"></ion-img>
+      <ion-card-header class="product-info">
+        <ion-card-title>{{ product.title }}</ion-card-title>
+        <ion-card-subtitle>${{ product.price.toFixed(2) }}</ion-card-subtitle>
+      </ion-card-header>
+      <div class="button-container">
+        <ion-button (click)="addToCart(product)" color="primary" class="action-button curved-button">Add to Cart</ion-button>
+        <ion-button (click)="buyNow(product)" color="secondary" class="action-button curved-button">Buy Now</ion-button>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>

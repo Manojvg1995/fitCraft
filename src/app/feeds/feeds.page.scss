@@ -1,88 +1,65 @@
-.white-color {
-    background-color: #fff; /* white background */
-  }
-  
-  .swiper-container {
-    width: 100%;
-    height: auto; /* Adjust height as needed */
-    z-index: 1;
-  }
-  
-  .swiper-slide ion-card {
-    margin: 0; /* Remove default margins */
-    background-color: white; /* Set background to white */
-  }
-  
-  .swiper-slide ion-card-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; /* Set background to white */
-    height: 200px; /* Adjust height as needed */
-  }
-  
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-  }
-  
-  .swiper-container-wrapper {
-    margin-bottom: 10px; /* Adjust spacing */
-  }
-  
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
-  
-  .scroll-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .icon-scroll {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .icon-wrapper {
-    margin-right: 20px;
-    text-align: center;
-    scroll-snap-align: start;
-    width: calc(100% / 3); /* Adjust the width to show 3 icons */
-  }
-  
-  .icon-wrapper ion-icon {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .icon-wrapper p {
-    font-size: 14px;
-    text-transform: lowercase;
-  }
-  
-  ion-content,
-  ion-header,
-  ion-toolbar,
-  ion-title,
-  ion-tab-bar,
-  ion-item {
-    --background: white;
-    --color: black; /* Set text color to black */
-    padding: 0 !important; /* Remove any default padding */
-    --border-width: 0px;
-    --border-style: none;
-    font-family: 'Open Sans', sans-serif !important;
-  }
-  
-  .no-border {
-    --border-style: none;
-  }
+ion-content {
+    --padding-start : 1rem;
+    --padding-end : 1rem;
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #515151;
+        margin: 0;
+    }
+
+    .avatar{
+        width: 35px;
+        height: 35px;
+        background-color: #2055f4;
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-end;
+        
+        overflow: hidden;
+        ion-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+    }
+}
+
+.space{
+    --padding-start : 1rem;
+    --padding-end : 1rem;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.list-header{
+    font-weight: 700;
+    color:#515151;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.top-space{
+    padding-top: 3rem;
+}

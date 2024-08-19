@@ -1,0 +1,95 @@
+.title {
+  font-weight: 600;
+  font-size: medium;
+  text-align: center;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the specified dimensions while maintaining its aspect ratio */
+  padding-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  padding: 0.5rem;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.1rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.card.selected {
+  background: #cfe3ff; /* Change to the desired selected color */
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+ion-content {
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #515151;
+  margin: 0;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #2055f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.avatar ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.space {
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.list-header {
+  font-weight: 700;
+  color: #515151;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  margin-top: 2.5rem;
+}

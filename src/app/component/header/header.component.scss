@@ -1,0 +1,64 @@
+ion-header {
+  --padding-start: 2rem;
+  --padding-end: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: none;
+  border-bottom: none;
+  height: 70px; /* Increased header height */
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%; /* Fill the header height */
+}
+
+ion-title {
+  font-size: 1.8rem; /* Increased title font size */
+  font-weight: 600;
+  color: #515151;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ion-buttons[slot="start"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ion-buttons[slot="end"] {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3%;
+}
+
+.avatar {
+  width: 45px; /* Increased avatar size */
+  height: 45px;
+  background-color: #2055f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

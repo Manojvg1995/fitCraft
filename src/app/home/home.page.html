@@ -1,14 +1,28 @@
-<ion-content>
-    <div class="header">
-        <h1>Menu</h1>
-        <div class="avatar">
-            <ion-img src="/assets/img/profilepic.jpeg"></ion-img>
-        </div>
-    </div>
+<ion-content class="ion-padding">
+    <div class="top-space"></div>
+    
     <div class="space">
-        <app-searchbar></app-searchbar>
+      <app-searchbar></app-searchbar>
     </div>
+    
+    <ion-refresher class="top-space-refresher" slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content class="center-spinner">
+        <ion-spinner name="crescent"></ion-spinner>
+      </ion-refresher-content>
+    </ion-refresher>
+    
     <div class="categories">
-        <app-category-item *ngFor="let item of categories" [item]="item" ></app-category-item>
+      <app-category-item *ngFor="let item of categories" [item]="item" (selectedCategoryEvent)="onCategorySelected($event)"></app-category-item>
     </div>
-</ion-content>
+    
+    <h1 class="list-header">Popular</h1>
+    
+    <div class="product-list">
+      <app-product-card *ngFor="let item of products; let i = index" 
+                        [item]="item" 
+                        [selected]="selectedCardIndex === i" 
+                        (selectedValue)="onCardSelect($event, i)">
+      </app-product-card>
+    </div>
+  </ion-content>
+  

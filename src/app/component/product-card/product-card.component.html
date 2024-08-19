@@ -1,0 +1,7 @@
+<div class="card" [ngClass]="{'selected': selected}" (click)="selectCard()">
+  <ion-img [src]="item.image" class="card-image"></ion-img>
+
+  <div class="card-content">
+    <h3 class="title">{{item.title}}</h3>
+  </div>  
+</div>

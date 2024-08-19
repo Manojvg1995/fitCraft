@@ -1,4 +1,4 @@
-<div class="wrapper" [ngClass]="{'active': item.active}">
+<div (click)="selectedCategoryItem(item)"class="wrapper" [ngClass]="{'active': item.active}">
   <div class="image-card">
     <ion-img [src]="item.image"></ion-img>
   </div>

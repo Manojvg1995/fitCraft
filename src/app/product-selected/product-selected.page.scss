@@ -1,0 +1,116 @@
+ion-content {
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the height of the content area */
+  padding-bottom: 4rem; /* Ensure there's enough space for the fixed button */
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    position: relative;
+
+    h1 {
+      font-size: 1.6rem; /* Smaller font size for the title */
+      font-weight: 600;
+      color: #515151;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .spacer {
+      width: 35px; /* This matches the width of the back button */
+    }
+  }
+
+  .swiper-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+
+  .gym-info {
+    ion-grid {
+      padding-bottom: 1px;
+
+      ion-row {
+        margin-bottom: 0.2rem;
+
+        .gym-name {
+          font-size: 1.4rem; /* Smaller font size */
+          font-weight: 700;
+          color: #515151;
+          margin: 0;
+          text-align: left;
+        }
+
+        .gym-price {
+          font-size: 1.2rem; /* Smaller font size */
+          font-weight: 600;
+          color: #727272;
+          margin: 0;
+          text-align: left;
+        }
+
+        .gym-description {
+          font-size: 1rem; /* Smaller font size */
+          font-weight: 400;
+          color: #515151;
+          margin: 0;
+          line-height: 1.4;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .amenities {
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem; /* Add padding to ensure content is not hidden behind the button */
+
+    h3 {
+      font-size: 1.3rem; /* Smaller font size for the heading */
+      font-weight: 600;
+      color: #515151;
+      margin-bottom: 0.5rem;
+    }
+
+    ion-icon {
+      margin-right: 0.5rem;
+      color: #2055f4;
+    }
+
+    ion-row {
+      margin-bottom: 0.5rem;
+
+      ion-col {
+        font-size: 1rem; /* Smaller font size for the details */
+        font-weight: 500;
+        color: #515151;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .book-button {
+    --background: #2055f4;
+    --color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: fixed; /* Fix position */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make button span the full width */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin: 0; /* Remove margin */
+    z-index: 10; /* Ensure it stays above other content */
+  }
+}

@@ -25,6 +25,10 @@ const routes: Routes = [
         loadChildren: () => import('../feeds/feeds-routing.module').then(m => m.FeedsPageRoutingModule)
       },
       {
+        path: 'book-product',
+        loadChildren: () => import('../product-selected/product-selected.module').then(m => m.ProductSelectedPageModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
