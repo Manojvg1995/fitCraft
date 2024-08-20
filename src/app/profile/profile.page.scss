@@ -1,81 +1,358 @@
 .white-color {
-    background-color: #fff; /* white background */
+  background-color: #fff;
+  /* white background */
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+  /* Adjust height as needed */
+  z-index: 1;
+}
+
+.swiper-slide ion-card {
+  margin: 0;
+  /* Remove default margins */
+  background-color: white;
+  /* Set background to white */
+}
+
+.swiper-slide ion-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  /* Set background to white */
+  height: 200px;
+  /* Adjust height as needed */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.swiper-container-wrapper {
+  margin-bottom: 10px;
+  /* Adjust spacing */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.icon-scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.icon-wrapper {
+  margin-right: 20px;
+  text-align: center;
+  scroll-snap-align: start;
+  width: calc(100% / 3);
+  /* Adjust the width to show 3 icons */
+}
+
+.icon-wrapper ion-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.icon-wrapper p {
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+ion-content,
+ion-header,
+ion-toolbar,
+ion-title,
+ion-tab-bar {
+  --background: white;
+  --color: black;
+  /* Set text color to black */
+  padding: 0 !important;
+  /* Remove any default padding */
+}
+
+.profile-content {
+  --background: #FFF;
+  color: #fff;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-image {
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-container {
+    height: 300px;
   }
-  
-  .swiper-container {
-    width: 100%;
-    height: auto; /* Adjust height as needed */
-    z-index: 1;
+
+  .avatar-image {
+    top: 18%;
+    width: 120px;
+    height: 120px;
   }
-  
-  .swiper-slide ion-card {
-    margin: 0; /* Remove default margins */
-    background-color: white; /* Set background to white */
-  }
-  
-  .swiper-slide ion-card-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; /* Set background to white */
-    height: 200px; /* Adjust height as needed */
-  }
-  
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-  }
-  
-  .swiper-container-wrapper {
-    margin-bottom: 10px; /* Adjust spacing */
-  }
-  
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
-  
-  .scroll-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .icon-scroll {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .icon-wrapper {
-    margin-right: 20px;
-    text-align: center;
-    scroll-snap-align: start;
-    width: calc(100% / 3); /* Adjust the width to show 3 icons */
-  }
-  
-  .icon-wrapper ion-icon {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .icon-wrapper p {
-    font-size: 14px;
-    text-transform: lowercase;
-  }
-  
-  ion-content,
-  ion-header,
-  ion-toolbar,
-  ion-title,
-  ion-tab-bar {
-    --background: white;
-    --color: black; /* Set text color to black */
-    padding: 0 !important; /* Remove any default padding */
-  }
-  
+}
+
+.profile-info {
+  padding-top: 60px;
+  /* Padding to push content below avatar */
+}
+
+.profile-info h2 {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #00aaff;
+  /* Change color to match design */
+}
+
+.description {
+  font-size: 14px;
+  color: #ccc;
+  /* Lighter text color */
+  margin-bottom: 20px;
+}
+
+.hashtags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+ion-chip {
+  --border-radius: 15px;
+  --color: #00aaff;
+  --border-color: #00aaff;
+  --background: transparent;
+}
+
+.social-icon,
+.notification-icon {
+  font-size: 24px;
+  color: #00aaff;
+  margin-left: 10px;
+}
+
+.edit-button {
+  --border-radius: 15px;
+  --border-color: #00aaff;
+  --color: #00aaff;
+  --padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-button ion-icon {
+  margin-left: 10px;
+  color: #00aaff;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.stat p:last-child {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.calorie-meter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.gauge-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.gauge-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  background-color: #e6e6e6;
+  overflow: hidden;
+}
+
+.gauge-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  background-color: #1a1a1a;
+  transform-origin: center bottom;
+}
+
+.gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gauge-center h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.gauge-center span {
+  font-size: 0.8rem;
+}
+
+.gauge-center p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.macros-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.macro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.macro-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.macro-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.macro-circle circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.macro-circle circle:first-child {
+  stroke: #e6e6e6;
+}
+
+.macro-circle circle:last-child {
+  stroke: #1a1a1a;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.macro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.macro p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.main-lable-heading {
+  font-weight: bold;
+  font-size: 16px;
+  color: #007aff;
+}
+
+.card-container {
+  text-align: center;
+  background-color: #FFF;
+  /* Black background similar to the image */
+  border-radius: 10px;
+  padding: 20px 10px;
+  color: white;
+  border: 2px solid gray;
+}
+
+.trainer-title {
+  font-size: 14px;
+  color: #00aaff;
+  /* Blue color similar to the image */
+  margin-bottom: 10px;
+}
+
+.trainer-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.trainer-name {
+  font-size: 18px;
+  color: black;
+}

@@ -1,7 +1,148 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-content">
+  <!-- Main Image -->
+  <div class="image-container">
+    <img src="assets/images/gym3.jpeg" alt="Main Image" class="main-image" />
+    <!-- Avatar Image -->
+  </div>
+  <img src="assets/images/gym3.jpeg" alt="Avatar" class="avatar-image" />
+  <div class="profile-info">
+    <h2>Ashika Ranganath</h2>
+    <p class="description">Profile Description</p>
+    <div class="hashtags">
+      <ion-chip outline color="primary">
+        <ion-label>#art</ion-label>
+      </ion-chip>
+      <ion-chip outline color="primary">
+        <ion-label>#music</ion-label>
+      </ion-chip>
+      <ion-chip outline color="primary">
+        <ion-label>#acting</ion-label>
+      </ion-chip>
+      <ion-icon name="logo-twitter" class="social-icon"></ion-icon>
+      <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
+    </div>
+
+    <!-- Edit Profile Button -->
+    <ion-button expand="block" class="edit-button" fill="outline">
+      Edit profile
+      <ion-icon slot="end" name="bulb-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="profile-stats">
+    <div class="stat">
+      <p>200</p>
+      <p>posts</p>
+    </div>
+    <div class="stat">
+      <p>1M</p>
+      <p>followers</p>
+    </div>
+    <div class="stat">
+      <p>108</p>
+      <p>following</p>
+    </div>
+  </div>
+  <div class="calorie-meter-container">
+    <!-- Calorie Gauge -->
+    <div class="gauge-container">
+      <div class="gauge-background"></div>
+      <div class="gauge-fill" [style.transform]="rotateGauge()"></div>
+      <div class="gauge-center">
+        <h2>{{ currentCalories }}<span>kcal</span></h2>
+        <p>from {{ maxCalories }}kcal</p>
+      </div>
+    </div>
+
+    <!-- Macros Gauges -->
+    <div class="macros-container">
+      <div class="macro">
+        <div class="macro-circle">
+          <svg>
+            <circle cx="50%" cy="50%" r="45%"></circle>
+            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(goal, maxGoal)">
+            </circle>
+          </svg>
+          <div class="macro-text">{{ goal }}kcal</div>
+        </div>
+        <p>Goal</p>
+      </div>
+
+      <div class="macro">
+        <div class="macro-circle">
+          <svg>
+            <circle cx="50%" cy="50%" r="45%"></circle>
+            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(protein, maxProtein)">
+            </circle>
+          </svg>
+          <div class="macro-text">{{ protein }}g</div>
+        </div>
+        <p>Protein</p>
+      </div>
+
+      <div class="macro">
+        <div class="macro-circle">
+          <svg>
+            <circle cx="50%" cy="50%" r="45%"></circle>
+            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(fat, maxFat)">
+            </circle>
+          </svg>
+          <div class="macro-text">{{ fat }}g</div>
+        </div>
+        <p>Fat</p>
+      </div>
+    </div>
+  </div>
+  <ion-item lines="none">
+    <ion-label class="main-lable-heading">
+      NFTs I offer for now
+    </ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <div class="product-list mt-3">
+    <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
+      (selectedValue)="onCardSelect($event, i)">
+    </app-product-card>
+  </div>
+  <ion-item lines="none">
+    <ion-label class="main-lable-heading">
+      My Collections
+    </ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <div class="product-list mt-3">
+    <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
+      (selectedValue)="onCardSelect($event, i)">
+    </app-product-card>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <!-- Gym Trainer -->
+      <ion-col size="6">
+        <div class="card-container">
+          <div class="trainer-title">My Gym Trainer</div>
+          <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Rocky">
+          <div class="trainer-name">Rocky</div>
+        </div>
+      </ion-col>
+
+      <!-- Yoga Guru -->
+      <ion-col size="6">
+        <div class="card-container">
+          <div class="trainer-title">My Yoga Guru</div>
+          <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Julie">
+          <div class="trainer-name">Julie</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
