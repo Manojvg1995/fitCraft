@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Checkout (2)</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Item 1 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/images/shoe-3.png" alt="Speedster Men Running Shoes">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Speedster Men Running Shoes - Black/ Dark Teal</h2>
+        <p>Size: UK10</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h3>₹2399.00</h3>
+            </ion-col>
+            <ion-col><del>₹5999.00</del></ion-col>
+          </ion-row>
+        </ion-grid>
+        <p>Estimated Delivery By: 31 Aug</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="decreaseQuantity(1)">
+          <ion-icon name="remove-outline"></ion-icon>
+        </ion-button>
+        <ion-text>{{quantities[1]}}</ion-text>
+        <ion-button (click)="increaseQuantity(1)">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <!-- Item 2 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/images/shoe-3.png" alt="Men's All Day Workout Beige Comfortech T-shirt">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Men's All Day Workout Beige Comfortech T-shirt</h2>
+        <p>Size: XL</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h3>₹576.00</h3>
+            </ion-col>
+            <ion-col><del>₹1199.00</del></ion-col>
+          </ion-row>
+        </ion-grid>
+        <p>Estimated Delivery By: 31 Aug</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="decreaseQuantity(2)">
+          <ion-icon name="remove-outline"></ion-icon>
+        </ion-button>
+        <ion-text>{{quantities[2]}}</ion-text>
+        <ion-button (click)="increaseQuantity(2)">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <!-- Delivery Address Section -->
+  <ion-item class="address-item" lines="full" detail>
+    <ion-icon name="location-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h3>Delivery Address</h3>
+      <p>Please add address</p>
+    </ion-label>
+    <ion-note color="primary" slot="end">Add Address</ion-note>
+  </ion-item>
+
+  <!-- Offers and Benefits Section -->
+  <ion-item class="offers-item" lines="full" detail>
+    <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h3>Offers and Benefits</h3>
+    </ion-label>
+  </ion-item>
+
+  <!-- Apply Coupon Section -->
+  <ion-item class="coupon-item" lines="full" detail>
+    <ion-icon name="gift-outline" slot="start"></ion-icon>
+    <ion-label>
+      <h3>Apply Coupon</h3>
+    </ion-label>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Price Details (2 items)</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Total MRP</ion-col>
+          <ion-col class="ion-text-end">₹7198.00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Total Discount</ion-col>
+          <ion-col class="ion-text-end">-₹4223.00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Special Offer: Flat 61% off applied</ion-col>
+          <ion-col class="ion-text-end">-₹3600.00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Special Offer: Flat 52% off applied</ion-col>
+          <ion-col class="ion-text-end">-₹623.00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Total Payable</ion-col>
+          <ion-col class="ion-text-end"><strong>₹2975.00</strong></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<!-- Floating Footer with Button -->
+<ion-footer class="floating-footer">
+  <ion-toolbar>
+    <ion-button expand="full" color="primary">Add Delivery Address</ion-button>
+  </ion-toolbar>
+</ion-footer>

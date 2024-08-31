@@ -1,0 +1,129 @@
+ion-content,
+ion-header,
+ion-toolbar,
+ion-title,
+ion-tab-bar {
+    --background: white;
+    --color: black;
+    /* Set text color to black */
+    padding: 0 !important;
+    /* Remove any default padding */
+}
+
+.main-lable-heading {
+    font-weight: bold;
+    font-size: 16px;
+    color: #007aff;
+}
+
+.main-product-card {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        height: 100%;
+        background-color: #f3f3f3;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .trainer-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .trainer-image {
+        max-width: 100%;
+        height: auto;
+        flex-grow: 1;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+    }
+
+    .trainer-name {
+        font-size: 18px;
+        color: black;
+    }
+
+    .bid-info {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .bid-para {
+            color: black;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .bid-number {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 14px;
+        }
+    }
+
+    .bid-details,
+    .time-remaining {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 8px;
+    }
+
+    .bid-button {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #ff5722;
+        color: black;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .bid-button:hover {
+        background-color: #e64a19;
+    }
+}
+
+.popular-product-card {
+    ion-card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    ion-card-header {
+        padding: 0;
+    }
+
+    ion-card-header img {
+        width: 100%;
+        height: auto;
+    }
+
+    ion-card-content {
+        padding-top: 8px;
+    }
+
+    ion-card-title {
+        font-size: 1em;
+        color: #333;
+    }
+}

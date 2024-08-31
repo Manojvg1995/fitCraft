@@ -1,0 +1,95 @@
+ion-item {
+    --min-height: 150px;
+}
+
+ion-thumbnail img {
+    width: 100px;
+    height: auto;
+}
+
+ion-label h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+ion-label h3 {
+    font-size: 1.2rem;
+    color: var(--ion-color-primary);
+}
+
+del {
+    font-size: 0.9rem;
+    color: var(--ion-color-medium);
+}
+
+ion-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+.address-item,
+.offers-item,
+.coupon-item {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --min-height: 64px;
+    background-color: #ffffff;
+    margin-top: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.address-item h3,
+.offers-item h3,
+.coupon-item h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.address-item p {
+    margin: 0;
+    color: var(--ion-color-medium);
+    font-size: 0.9rem;
+}
+
+ion-icon {
+    color: var(--ion-color-primary);
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+ion-note {
+    font-size: 0.9rem;
+}
+
+.floating-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--ion-background-color);
+    z-index: 10;
+}
+
+ion-button {
+    --border-radius: 20px;
+    // --background: #ff3d71;
+}
+
+ion-card {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+ion-card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
