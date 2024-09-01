@@ -47,7 +47,20 @@ const routes: Routes = [
   {
     path: 'product-cart',
     loadChildren: () => import('./component/product-cart/product-cart.module').then(m => m.ProductCartPageModule)
+  },
+  {
+    path: 'shaping-body-details',
+    loadChildren: () => import('./shaping-body-details/shaping-body-details.module').then(m => m.ShapingBodyDetailsPageModule)
+  },
+  {
+    path: 'eat-healthy',
+    loadChildren: () => import('./eat-healthy/eat-healthy.module').then(m => m.EatHealthyPageModule)
+  },
+  {
+    path: 'health-tracking',
+    loadChildren: () => import('./health-tracking/health-tracking.module').then(m => m.HealthTrackingPageModule)
   }
+
 ];
 
 @NgModule({
