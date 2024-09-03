@@ -8,6 +8,7 @@ import { ProductPagePageRoutingModule } from './product-page-routing.module';
 
 import { ProductPagePage } from './product-page.page';
 import { ProductCardModule } from "../product-card/product-card.model";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { ProductCardModule } from "../product-card/product-card.model";
     ProductPagePageRoutingModule,
     ProductCardModule
   ],
-  declarations: [ProductPagePage]
+  declarations: [ProductPagePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductPagePageModule { }

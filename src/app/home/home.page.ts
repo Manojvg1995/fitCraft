@@ -17,49 +17,67 @@ register();
 export class HomePage {
   selectedCardIndex: number | null = null;
 
-  categories:Category[] = [];
-  products:Product[] = [];
+  categories: Category[] = [];
+  products: Product[] = [];
   selectedCard: any = null;
-  
-  constructor(private productService:ProductService,
+
+  constructor(private productService: ProductService,
     private router: Router,
     private navCtrl: NavController
   ) {
     this.getCategories();
     this.products = this.productService.getProduct();
-    console.log("product : "+this.products)
-   }
-   
+    console.log("product : " + this.products)
+  }
+
   onCategorySelected(category: Category) {
     console.log(category);
     this.categories.forEach(c => c.active = c.id === category.id);
   }
 
-  getCategories(){
+  getCategories() {
     this.categories = [
       {
-          "id": 1,
-          "label": "Gym",
-          "image": "/assets/icon/treadmill.png",
-          "active":true
+        "id": 1,
+        "label": "Gym",
+        "image": "/assets/icon/treadmill.png",
+        "active": true
       },
       {
-          "id": 2,
-          "label": "Yoga",
-          "image": "/assets/icon/yoga.png",
-          "active":false
+        "id": 2,
+        "label": "Yoga",
+        "image": "/assets/icon/yoga.png",
+        "active": false
       },
       {
         "id": 3,
         "label": "Weight loss",
         "image": "/assets/icon/slim.png",
-        "active":false
+        "active": false
       },
       {
-          "id": 4,
-          "label": "Dhyana",
-          "image": "/assets/icon/meditation.png",
-          "active":false
+        "id": 4,
+        "label": "Dhyana",
+        "image": "/assets/icon/meditation.png",
+        "active": false
+      },
+      {
+        "id": 5,
+        "label": "Dhyana",
+        "image": "/assets/icon/meditation.png",
+        "active": false
+      },
+      {
+        "id": 6,
+        "label": "Dhyana",
+        "image": "/assets/icon/meditation.png",
+        "active": false
+      },
+      {
+        "id": 7,
+        "label": "Dhyana",
+        "image": "/assets/icon/meditation.png",
+        "active": false
       }
     ];
   }
@@ -75,8 +93,8 @@ export class HomePage {
     this.navCtrl.navigateForward('/pages/book-product', {
       animation: navAnimation
     });
-   // this.router.navigate(['/pages/book-product']);
-    console.log(JSON.stringify(item),index)
+    // this.router.navigate(['/pages/book-product']);
+    console.log(JSON.stringify(item), index)
   }
 
   handleRefresh(event: { target: { complete: () => void; }; }) {
