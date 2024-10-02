@@ -13,4 +13,10 @@ export class LoginPage  {
   login(){
     this.router.navigate(['/pages/home']);
   }
+
+  forgotPassword() {
+    console.log('Forgot password clicked');
+    // Navigation logic to forgot password page
+  }
+  
 }

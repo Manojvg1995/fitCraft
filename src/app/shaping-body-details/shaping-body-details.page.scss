@@ -1,47 +1,62 @@
 ion-content {
-    --background: #1B354A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.card {
-    background-color: #274c63;
-    border-radius: 20px;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
+    --background: #1b354a;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.image-container {
-    background-color: #1b354a;
+    height: 100vh;
+    padding: 0;
+  }
+  
+  .card {
+    background-color: #274c63;
     border-radius: 15px;
     padding: 20px;
-    margin-bottom: 20px;
-}
-
-.image-container img {
-    width: 100%;
+    width: 90vw;
+    max-width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .image-container {
+    background-color: #1b354a;
     border-radius: 15px;
-}
-
-.text-container h2 {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .text-container h2 {
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     margin: 10px 0;
-}
-
-.text-container p {
-    color: #9FA8DA;
-    font-size: 14px;
+  }
+  
+  .text-container p {
+    color: #9fa8da;
+    font-size: 16px;
     margin: 0;
-}
+  }
+  
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
 
-.progress-indicator {
+  .progress-indicator {
     display: flex;
     justify-content: center;
     margin: 20px 0;
@@ -60,18 +75,18 @@ ion-content {
 }
 
 .arrow-button {
-    background-color: white;
-    color: #274c63;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+  background-color: white;
+  color: #274c63;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .arrow-button ion-icon {
-    font-size: 18px;
-    color: #274c63;
+  font-size: 18px;
+  color: #274c63;
 }

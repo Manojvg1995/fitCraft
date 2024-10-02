@@ -1,7 +1,7 @@
 <ion-content class="background">
   <div class="card">
     <div class="image">
-      <ion-img class="logo" src="assets/img/img.jpeg" ></ion-img>
+      <ion-img class="logo" src="assets/img/img.jpeg"></ion-img>
     </div>
     <form>
       <div class="form-field">
@@ -9,8 +9,17 @@
         <ion-input placeholder="name"></ion-input>
       </div>
       <div class="form-field">
-        <ion-icon name="call-outline"></ion-icon>
-        <ion-input placeholder="phone number"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" placeholder="password"></ion-input>
+      </div>
+      <div class="remember-me-forgot-password">
+        <div class="remember-me">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <label>Remember Me</label>
+        </div>
+        <div class="forgot-password">
+          <a (click)="forgotPassword()">Forgot Password?</a>
+        </div>
       </div>
       <ion-button expand="block" (click)="login()">Login</ion-button>
     </form>

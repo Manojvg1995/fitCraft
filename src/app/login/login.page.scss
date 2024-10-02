@@ -2,24 +2,8 @@
   --background: #2055f4;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0.5rem;
-}
-
-.header ion-button {
-  height: 60px;
-  width: 60px;
-  color: #2c6975;
-}
-
-.header ion-icon {
-  font-size: 2rem;
-}
-
 .card {
-  height: 75%;
+  height: 85%;
   width: 100%;
   background: white;
   position: absolute;
@@ -46,11 +30,44 @@ form {
 }
 
 .form-field {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Increased margin */
   z-index: 1;
 }
 
 ion-button {
-  margin-top: 1rem;
+  margin-top: 4rem; /* Increased margin */
+  width: 100%;
+  height: 60px;
+  border-radius: 70px;
+  font-size: 1.5rem;
   --button-background-color: #9F8151 !important;
+}
+
+.remember-me-forgot-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Increased margin */
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me ion-checkbox {
+  margin-right: 0.5rem;
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #2055f4;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
 }

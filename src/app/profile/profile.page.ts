@@ -11,7 +11,7 @@ import { navAnimation } from '../animation/navAnimation';
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class ProfilePage {
   currentCalories: number = 1156;
   maxCalories: number = 1500;
 
@@ -34,8 +34,6 @@ export class ProfilePage implements OnInit {
     this.products = this.productService.getProduct();
   }
 
-  ngOnInit() {
-  }
 
   rotateGauge(): string {
     const rotation = (this.currentCalories / this.maxCalories) * 180;
