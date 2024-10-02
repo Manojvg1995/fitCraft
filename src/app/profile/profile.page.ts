@@ -28,12 +28,24 @@ export class ProfilePage {
   categories: Category[] = [];
   products: Product[] = [];
   selectedCard: any = null;
+
   constructor(private productService: ProductService,
     private router: Router,
     private navCtrl: NavController) {
     this.products = this.productService.getProduct();
   }
 
+
+  tokens = [
+    { id: 1, name: 'Fitcraft 100', eth: '8.4 ETH', usd: '$14,668' },
+    { id: 2, name: 'Runcraft 300', eth: '4 ETH', usd: '$4,000' },
+  ];
+
+  isPublic: boolean = true;
+
+  togglePublic() {
+    this.isPublic = !this.isPublic;
+  }
 
   rotateGauge(): string {
     const rotation = (this.currentCalories / this.maxCalories) * 180;

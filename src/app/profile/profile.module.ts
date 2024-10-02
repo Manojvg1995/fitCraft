@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -17,6 +17,7 @@ import { ProductCardModule } from "../component/product-card/product-card.model"
     ProfilePageRoutingModule,
     ProductCardModule
   ],
-  declarations: [ProfilePage]
+  declarations: [ProfilePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProfilePageModule { }

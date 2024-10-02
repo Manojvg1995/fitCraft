@@ -106,43 +106,229 @@
     </ion-label>
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <div class="product-list mt-3">
-    <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
-      (selectedValue)="onCardSelect($event, i)">
-    </app-product-card>
-  </div>
+  <swiper-container [spaceBetween]="20" [slidesPerView]="2">
+    <ng-container *ngFor="let item of products; let i = index">
+      <swiper-slide>
+        <app-product-card [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+        </app-product-card>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+  <ion-item lines="none">
+    <ion-label class="main-lable-heading">
+      Photos
+    </ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <section class="thumbnail-container">
+    <div class="section">
+      <div class="thumbnail-grid">
+        <div class="grid-item grid-item-large">
+          <img src="assets/images/gym2.jpeg" alt="Photo 1" />
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/gym2.jpeg" alt="Photo 2" />
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/gym2.jpeg" alt="Photo 3" />
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/gym2.jpeg" alt="Photo 4" />
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/gym2.jpeg" alt="Photo 5" />
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/gym2.jpeg" alt="Photo 6" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <ion-item lines="none">
     <ion-label class="main-lable-heading">
       My Collections
     </ion-label>
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <div class="product-list mt-3">
-    <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
-      (selectedValue)="onCardSelect($event, i)">
-    </app-product-card>
+  <swiper-container [spaceBetween]="5" [slidesPerView]="1">
+    <swiper-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" size-md="6">
+            <ion-card>
+              <img src="assets/images/gym2.jpeg" alt="Card Image" />
+              <ion-card-content>
+                <div>
+                  <ion-text color="primary">Calories Burnt</ion-text>
+                  <ion-icon name="flame"></ion-icon>
+                  <ion-text color="primary">18,900</ion-text>
+                </div>
+                <div>
+                  <ion-text>Luck 60%</ion-text>
+                </div>
+                <div>
+                  <ion-text>62,054 steps</ion-text>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6" size-md="6">
+            <ion-card>
+              <img src="assets/images/gym2.jpeg" alt="Card Image" />
+              <ion-card-content>
+                <div>
+                  <ion-text color="primary">Calories Burnt</ion-text>
+                  <ion-icon name="flame"></ion-icon>
+                  <ion-text color="primary">0</ion-text>
+                </div>
+                <div>
+                  <ion-text>Luck 50%</ion-text>
+                </div>
+                <div>
+                  <ion-text>0 steps</ion-text>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" size-md="6">
+            <ion-card>
+              <img src="assets/images/gym2.jpeg" alt="Card Image" />
+              <ion-card-content>
+                <div>
+                  <ion-text color="primary">Calories Burnt</ion-text>
+                  <ion-icon name="flame"></ion-icon>
+                  <ion-text color="primary">18,900</ion-text>
+                </div>
+                <div>
+                  <ion-text>Luck 60%</ion-text>
+                </div>
+                <div>
+                  <ion-text>62,054 steps</ion-text>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6" size-md="6">
+            <ion-card>
+              <img src="assets/images/gym2.jpeg" alt="Card Image" />
+              <ion-card-content>
+                <div>
+                  <ion-text color="primary">Calories Burnt</ion-text>
+                  <ion-icon name="flame"></ion-icon>
+                  <ion-text color="primary">0</ion-text>
+                </div>
+                <div>
+                  <ion-text>Luck 50%</ion-text>
+                </div>
+                <div>
+                  <ion-text>0 steps</ion-text>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </swiper-slide>
+  </swiper-container>
+  <swiper-container>
+    <swiper-slide>
+      <ion-grid>
+        <ion-row>
+          <!-- Gym Trainer -->
+          <ion-col size="6">
+            <div class="card-container">
+              <div class="trainer-title">My Gym Trainer</div>
+              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Rocky">
+              <div class="trainer-name">Rocky</div>
+            </div>
+          </ion-col>
+
+          <!-- Yoga Guru -->
+          <ion-col size="6">
+            <div class="card-container">
+              <div class="trainer-title">My Yoga Guru</div>
+              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Julie">
+              <div class="trainer-name">Julie</div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-grid>
+        <ion-row>
+          <!-- Gym Trainer -->
+          <ion-col size="6">
+            <div class="card-container">
+              <div class="trainer-title">My Gym Trainer</div>
+              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Rocky">
+              <div class="trainer-name">Rocky</div>
+            </div>
+          </ion-col>
+
+          <!-- Yoga Guru -->
+          <ion-col size="6">
+            <div class="card-container">
+              <div class="trainer-title">My Yoga Guru</div>
+              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Julie">
+              <div class="trainer-name">Julie</div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </swiper-slide>
+  </swiper-container>
+  <div class="tokens-card">
+    <div class="tokens-header">
+      <div class="tokens-title">Tokens</div>
+      <div class="public-toggle">
+        <span class="toggle-label">Public</span>
+        <ion-toggle [(ngModel)]="isPublic" (ionChange)="togglePublic()"></ion-toggle>
+      </div>
+    </div>
+
+    <div class="tokens-list">
+      <div *ngFor="let token of tokens" class="token-item">
+        <div class="token-id">{{ token.id }}</div>
+        <div class="token-details">
+          <div class="token-name">{{ token.name }}</div>
+          <div class="token-value">{{ token.eth }} ~ {{ token.usd }}</div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="rewards-card">
+    <div class="rewards-header">My Rewards</div>
 
-  <ion-grid>
-    <ion-row>
-      <!-- Gym Trainer -->
-      <ion-col size="6">
-        <div class="card-container">
-          <div class="trainer-title">My Gym Trainer</div>
-          <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Rocky">
-          <div class="trainer-name">Rocky</div>
-        </div>
-      </ion-col>
+    <div class="rewards-content">
+      <div class="reward-item">
+        <svg viewBox="0 0 512 512"
+          style="width: 32px; height: 32px; overflow: visible; opacity: 1; z-index: 1; fill: rgb(220, 255, 121);">
+          <path
+            d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z">
+          </path>
+        </svg>
+        <div class="reward-value">108</div>
+        <div class="reward-label">Total Rewards collected</div>
+      </div>
 
-      <!-- Yoga Guru -->
-      <ion-col size="6">
-        <div class="card-container">
-          <div class="trainer-title">My Yoga Guru</div>
-          <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Julie">
-          <div class="trainer-name">Julie</div>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
+      <div class="reward-item">
+        <svg viewBox="0 0 512 512"
+          style="width: 32px; height: 32px; overflow: visible; opacity: 1; z-index: 1; fill: rgb(220, 255, 121);">
+          <path
+            d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z">
+          </path>
+        </svg>
+        <div class="reward-value">21</div>
+        <div class="reward-label">Current Month Rewards</div>
+      </div>
+    </div>
+  </div>
 </ion-content>

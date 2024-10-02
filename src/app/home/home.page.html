@@ -1,28 +1,42 @@
 <ion-content class="ion-padding">
-    <div class="top-space"></div>
-    
-    <div class="space">
-      <app-searchbar></app-searchbar>
-    </div>
-    
-    <ion-refresher class="top-space-refresher" slot="fixed" (ionRefresh)="handleRefresh($event)">
-      <ion-refresher-content class="center-spinner">
-        <ion-spinner name="crescent"></ion-spinner>
-      </ion-refresher-content>
-    </ion-refresher>
-    
-    <div class="categories">
-      <app-category-item *ngFor="let item of categories" [item]="item" (selectedCategoryEvent)="onCategorySelected($event)"></app-category-item>
-    </div>
-    
-    <h1 class="list-header">Popular</h1>
-    
-    <div class="product-list">
-      <app-product-card *ngFor="let item of products; let i = index" 
-                        [item]="item" 
-                        [selected]="selectedCardIndex === i" 
-                        (selectedValue)="onCardSelect($event, i)">
-      </app-product-card>
-    </div>
-  </ion-content>
-  
+  <div class="top-space"></div>
+
+  <div class="space">
+    <app-searchbar></app-searchbar>
+  </div>
+
+  <ion-refresher class="top-space-refresher" slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content class="center-spinner">
+      <ion-spinner name="crescent"></ion-spinner>
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- <div class="categories">
+    <app-category-item *ngFor="let item of categories" [item]="item"
+      (selectedCategoryEvent)="onCategorySelected($event)"></app-category-item>
+  </div> -->
+
+  <swiper-container [spaceBetween]="20" [slidesPerView]="4.5">
+    <ng-container *ngFor="let category of categories">
+      <swiper-slide>
+        <app-category-item [item]="category" (selectedCategoryEvent)="onCategorySelected($event)">
+        </app-category-item>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+
+  <h1 class="list-header">Popular</h1>
+  <swiper-container [spaceBetween]="20" [slidesPerView]="2">
+    <ng-container *ngFor="let item of products; let i = index">
+      <swiper-slide>
+        <app-product-card [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+        </app-product-card>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+  <div class="product-list">
+    <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
+      (selectedValue)="onCardSelect($event, i)">
+    </app-product-card>
+  </div>
+</ion-content>
