@@ -1,13 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Checkout (2)</ion-title>
-    <ion-buttons slot="end">
-      <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
+  
 </ion-header>
 
 <ion-content>
@@ -31,13 +23,9 @@
         <p>Estimated Delivery By: 31 Aug</p>
       </ion-label>
       <ion-buttons slot="end">
-        <ion-button (click)="decreaseQuantity(1)">
-          <ion-icon name="remove-outline"></ion-icon>
-        </ion-button>
-        <ion-text>{{quantities[1]}}</ion-text>
-        <ion-button (click)="increaseQuantity(1)">
-          <ion-icon name="add-outline"></ion-icon>
-        </ion-button>
+        <ion-select [(ngModel)]="quantities[2]" interface="popover" placeholder="Quantity" class="custom-select">
+          <ion-select-option *ngFor="let qty of availableQuantities" class="drop-down">{{ qty }}</ion-select-option>
+        </ion-select>
       </ion-buttons>
     </ion-item>
 
@@ -60,13 +48,9 @@
         <p>Estimated Delivery By: 31 Aug</p>
       </ion-label>
       <ion-buttons slot="end">
-        <ion-button (click)="decreaseQuantity(2)">
-          <ion-icon name="remove-outline"></ion-icon>
-        </ion-button>
-        <ion-text>{{quantities[2]}}</ion-text>
-        <ion-button (click)="increaseQuantity(2)">
-          <ion-icon name="add-outline"></ion-icon>
-        </ion-button>
+        <ion-select [(ngModel)]="quantities[1]" interface="popover" placeholder="Quantity" class="custom-select">
+          <ion-select-option *ngFor="let qty of availableQuantities" class="drop-down">{{ qty }}</ion-select-option>
+        </ion-select>
       </ion-buttons>
     </ion-item>
   </ion-list>
@@ -130,6 +114,6 @@
 <!-- Floating Footer with Button -->
 <ion-footer class="floating-footer">
   <ion-toolbar>
-    <ion-button expand="full" color="primary">Add Delivery Address</ion-button>
+    <ion-button (click)="placeOrder()" expand="full" color="primary">Place Order</ion-button>
   </ion-toolbar>
 </ion-footer>

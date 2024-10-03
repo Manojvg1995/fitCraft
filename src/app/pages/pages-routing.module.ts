@@ -13,10 +13,6 @@ const routes: Routes = [
         loadChildren: () => import('../home/home-routing.module').then(m => m.HomePageRoutingModule)
       },
       {
-        path: 'store',
-        loadChildren: () => import('../store/store-routing.module').then(m => m.StorePageRoutingModule)
-      },
-      {
         path: 'profile',
         loadChildren: () => import('../profile/profile-routing.module').then(m => m.ProfilePageRoutingModule)
       },
@@ -27,6 +23,14 @@ const routes: Routes = [
       {
         path: 'book-product',
         loadChildren: () => import('../product-selected/product-selected.module').then(m => m.ProductSelectedPageModule)
+      },
+      {
+        path: 'product-cart',
+        loadChildren: () => import('../component/product-cart/product-cart.module').then(m => m.ProductCartPageModule)
+      },
+      {
+        path: 'product-listing',
+        loadChildren: () => import('../component/product-page/product-page.module').then(m => m.ProductPagePageModule)
       },
       {
         path: '',

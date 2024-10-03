@@ -1,3 +1,6 @@
+ion-header{
+    padding-top: 2rem;
+}
 ion-item {
     --min-height: 150px;
 }
@@ -69,7 +72,7 @@ ion-note {
 
 .floating-footer {
     position: fixed;
-    bottom: 0;
+    bottom: -0.5rem;
     left: 0;
     right: 0;
     padding: 0;
@@ -80,6 +83,7 @@ ion-note {
 
 ion-button {
     --border-radius: 20px;
+    height: 2rem;
     // --background: #ff3d71;
 }
 
@@ -87,9 +91,14 @@ ion-card {
     margin: 0;
     padding: 0;
     margin-bottom: 50px;
+    height: 1rem;
 }
 
 ion-card-title {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+.drop-down{
+    width: 5px;
 }

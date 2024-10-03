@@ -19,4 +19,8 @@ export class ProductSelectedPage {
   backToHome(){
     this.router.navigate(['/pages/home']);
   }
+
+  navigateToAddToCart(){
+    this.router.navigate(['/pages/product-cart']);
+  }
 }

@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
   templateUrl: './product-page.page.html',
   styleUrls: ['./product-page.page.scss'],
 })
-export class ProductPagePage implements OnInit {
+export class ProductPagePage {
   categories: Category[] = [];
   products: Product[] = [];
   selectedCard: any = null;
@@ -23,8 +23,6 @@ export class ProductPagePage implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
 
   onCardSelect(item: any, index: number) {
     if (this.selectedCardIndex === index) {
