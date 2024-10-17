@@ -1,6 +1,13 @@
-ion-header{
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    padding-top: 30px; /* Add top padding */
+}
+
+ion-header {
     padding-top: 2rem;
 }
+
 ion-item {
     --min-height: 150px;
 }
@@ -28,11 +35,6 @@ del {
 ion-text {
     display: inline-flex;
     align-items: center;
-}
-
-ion-content {
-    --padding-start: 16px;
-    --padding-end: 16px;
 }
 
 .address-item,
@@ -84,14 +86,12 @@ ion-note {
 ion-button {
     --border-radius: 20px;
     height: 2rem;
-    // --background: #ff3d71;
 }
 
 ion-card {
     margin: 0;
     padding: 0;
     margin-bottom: 50px;
-    height: 1rem;
 }
 
 ion-card-title {
@@ -99,6 +99,10 @@ ion-card-title {
     font-size: 1.1rem;
 }
 
-.drop-down{
+.drop-down {
     width: 5px;
+}
+
+.top-space {
+    padding-top: 5rem;
 }

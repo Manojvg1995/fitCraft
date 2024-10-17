@@ -1,129 +1,127 @@
-ion-content,
-ion-header,
-ion-toolbar,
-ion-title,
-ion-tab-bar {
-    --background: white;
-    --color: black;
-    /* Set text color to black */
-    padding: 0 !important;
-    /* Remove any default padding */
-}
+// Variables for colors and spacing
+$primary-color: #3880ff;
+$secondary-color: #f4f4f4;
+$card-bg-color: rgb(53, 52, 52);
+$text-color: #ffffff;
+$border-radius: 10px;
+$padding: 16px;
 
-.main-lable-heading {
+ion-content {
+  .main-lable-heading {
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 16px;
-    color: #007aff;
-}
+    color: $text-color;
+  }
 
-.main-product-card {
-    .card-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        height: 100%;
-        background-color: #f3f3f3;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-
-        @media (max-width: 768px) {
-            margin-bottom: 20px;
-        }
-    }
+  // General card styles
+  .card-container {
+    background-color: $card-bg-color;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: $padding;
+    text-align: center;
 
     .trainer-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: $text-color;
     }
 
     .trainer-image {
-        max-width: 100%;
-        height: auto;
-        flex-grow: 1;
-        object-fit: cover;
-        margin-bottom: 10px;
-        border-radius: 10px;
-
-    }
-
-    .trainer-name {
-        font-size: 18px;
-        color: black;
+      width: 100%;
+      height: 7rem;
+      border-radius: $border-radius;
     }
 
     .bid-info {
-        width: 100%;
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+
+      .bid-details,
+      .time-remaining {
+        text-align: center;
 
         .bid-para {
-            color: black;
-            font-size: 14px;
-            line-height: 14px;
+          font-size: 0.9rem;
+          color: #666;
         }
 
         .bid-number {
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 14px;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: $primary-color;
         }
-    }
-
-    .bid-details,
-    .time-remaining {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        gap: 8px;
+      }
     }
 
     .bid-button {
-        margin-top: 10px;
-        width: 100%;
-        background-color: #ff5722;
-        color: black;
-        border: none;
-        padding: 10px;
-        font-size: 1em;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+      background-color: $primary-color;
+      color: white;
+      border-radius: $border-radius;
+      padding: 10px 20px;
+      margin-top: 10px;
 
-    .bid-button:hover {
-        background-color: #e64a19;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
     }
+  }
+
+  // Popular Collection card styles
+  .popular-product-card {
+    margin-bottom: 20px;
+
+    ion-card {
+      background-color: $card-bg-color;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+      ion-card-header {
+        img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+      }
+
+      ion-card-title {
+        font-size: 1.1rem;
+        text-align: center;
+        color: $text-color;
+      }
+    }
+  }
+
+  // NFT card styles
+  .nft-product-card {
+    margin-bottom: 20px;
+
+    ion-card {
+      background-color: $card-bg-color;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+      ion-card-header {
+        img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+      }
+
+      ion-card-title {
+        font-size: 1.1rem;
+        text-align: center;
+        color: $text-color;
+      }
+    }
+  }
 }
 
-.popular-product-card {
-    ion-card {
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        overflow: hidden;
-    }
-
-    ion-card-header {
-        padding: 0;
-    }
-
-    ion-card-header img {
-        width: 100%;
-        height: auto;
-    }
-
-    ion-card-content {
-        padding-top: 8px;
-    }
-
-    ion-card-title {
-        font-size: 1em;
-        color: #333;
-    }
+img{
+    height: 10px;
 }

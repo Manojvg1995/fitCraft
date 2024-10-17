@@ -16,8 +16,8 @@ ion-content {
 
     h1 {
       font-size: 1.6rem; /* Smaller font size for the title */
-      font-weight: 600;
-      color: #515151;
+      font-weight: 600; /* Moderate boldness */
+      color: #ffffff;
       margin: 0;
       position: absolute;
       left: 50%;
@@ -45,24 +45,24 @@ ion-content {
 
         .gym-name {
           font-size: 1.4rem; /* Smaller font size */
-          font-weight: 700;
-          color: #515151;
+          font-weight: 700; /* Bold */
+          color: #ffffff;
           margin: 0;
           text-align: left;
         }
 
         .gym-price {
           font-size: 1.2rem; /* Smaller font size */
-          font-weight: 600;
-          color: #727272;
+          font-weight: 600; /* Semi-bold */
+          color: #ffffff;
           margin: 0;
           text-align: left;
         }
 
         .gym-description {
           font-size: 1rem; /* Smaller font size */
-          font-weight: 400;
-          color: #515151;
+          font-weight: 400; /* Normal weight */
+          color: #ffffff;
           margin: 0;
           line-height: 1.4;
           text-align: justify;
@@ -77,8 +77,8 @@ ion-content {
 
     h3 {
       font-size: 1.3rem; /* Smaller font size for the heading */
-      font-weight: 600;
-      color: #515151;
+      font-weight: 600; /* Semi-bold */
+      color: #ffffff;
       margin-bottom: 0.5rem;
     }
 
@@ -92,8 +92,8 @@ ion-content {
 
       ion-col {
         font-size: 1rem; /* Smaller font size for the details */
-        font-weight: 500;
-        color: #515151;
+        font-weight: 500; /* Medium */
+        color: #ffffff;
         display: flex;
         align-items: center;
       }
@@ -103,7 +103,7 @@ ion-content {
   .book-button {
     --background: #2055f4;
     --color: white;
-    font-weight: 600;
+    font-weight: 600; /* Semi-bold for button text */
     text-transform: uppercase;
     position: fixed; /* Fix position */
     bottom: 0;
