@@ -11,7 +11,7 @@ export class LoginPage  {
   constructor(private router: Router) { }
 
   login(){
-    this.router.navigate(['/pages/home']);
+    this.router.navigate(['/pages/feed']);
   }
 
   forgotPassword() {

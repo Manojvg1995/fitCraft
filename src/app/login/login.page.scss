@@ -1,15 +1,16 @@
 .background {
-  --background: #2055f4;
+  --background: #1b1b1b; /* Dark background */
 }
 
 .card {
   height: 85%;
   width: 100%;
-  background: white;
+  background: #2c2c2c; /* Dark card background */
   position: absolute;
   bottom: 0%;
   border-radius: 3rem 3rem 0 0;
   padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optional shadow */
 }
 
 .logo {
@@ -31,16 +32,38 @@ form {
 
 .form-field {
   margin-bottom: 2rem; /* Increased margin */
-  z-index: 1;
+  display: flex; /* Use flex to align icon and input */
+  align-items: center; /* Center vertically */
+}
+
+ion-input {
+  --background: transparent; /* Transparent background */
+  --color: white; /* Input text color */
+  border: none; /* Remove border */
+  border-bottom: none; /* Remove bottom border */
+  padding-left: 10px; /* Add some padding to the left */
+}
+
+ion-input:focus {
+  --box-shadow: none; /* Remove shadow on focus */
+}
+
+ion-icon {
+  color: #528ff4; /* Icon color */
+  margin-right: 10px; /* Space between icon and input */
 }
 
 ion-button {
   margin-top: 4rem; /* Increased margin */
-  width: 100%;
-  height: 60px;
-  border-radius: 70px;
-  font-size: 1.5rem;
-  --button-background-color: #9F8151 !important;
+  width: 100%; /* Full width */
+  height: 40px; /* Reduced height */
+  border-radius: 25px; /* Smaller border radius */
+  font-size: 1rem; /* Reduced font size */
+  --background: #528ff4 !important; /* Button background color */
+  --color: white; /* Text color */
+  --button-background: #528ff4; /* Ensure background color is set */
+  --button-background-activated: #4162a1; /* Optional darker color when pressed */
+  padding: 0; /* Remove padding for a more compact button */
 }
 
 .remember-me-forgot-password {
@@ -65,7 +88,7 @@ ion-button {
 
 .forgot-password a {
   text-decoration: none;
-  color: #2055f4;
+  color: #528ff4; /* Updated link color */
 }
 
 .forgot-password a:hover {

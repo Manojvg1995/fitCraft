@@ -1,26 +1,48 @@
 ion-tab-bar {
   --border: none;
-  --background: #fff; /* or your desired background color */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --background: var(--ion-background-color, #1e1e1e); /* Dark background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 ion-tab-button {
   --background: transparent;
-  --color: #333; /* or your desired text color */
+  --color: var(--ion-text-color, #e0e0e0); /* Light text color */
 }
 
 ion-tab-button:hover {
-  --background: #f7f7f7; /* or your desired hover background color */
+  --background: var(--ion-hover-background, #3a3a3a); /* Dark hover background */
 }
 
 ion-icon {
-  font-size: 24px; /* adjust icon size as needed */
+  font-size: 30px; /* Reduced size of the icon to 30px */
+  color: var(--ion-icon-color, #e0e0e0); /* Light icon color */
 }
 
 ion-label {
   font-size: 14px; /* adjust label size as needed */
+  color: var(--ion-text-color, #e0e0e0); /* Light label color */
 }
 
-.padding-top{
-  padding-top: 1rem ;
+.padding-top {
+  padding-top: 1rem;
+}
+
+/* Optional: For when the theme toggles */
+.dark-mode {
+  ion-tab-bar {
+    --background: #1e1e1e;
+  }
+
+  ion-tab-button {
+    --color: #e0e0e0;
+  }
+
+  ion-tab-button:hover {
+    --background: #3a3a3a;
+  }
+
+  ion-icon,
+  ion-label {
+    color: #e0e0e0;
+  }
 }
