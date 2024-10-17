@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { SearchbarModule } from '../component/searchbar/searchbar.module';
 import { CategoryItemModule } from '../component/category-item/category-item.model';
 import { ProductCardModule } from '../component/product-card/product-card.model';
+import { PopularProductModule } from '../component/popular-product/popular-product.model'
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ProductCardModule } from '../component/product-card/product-card.model'
     HomePageRoutingModule,
     SearchbarModule,
     CategoryItemModule,
-    ProductCardModule
+    ProductCardModule,
+    PopularProductModule
   ],
   declarations: [HomePage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

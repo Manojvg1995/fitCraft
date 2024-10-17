@@ -27,11 +27,11 @@
 
   <h1 class="list-header">Popular</h1>
   <br>
-  <swiper-container [spaceBetween]="20" [slidesPerView]="2">
+  <swiper-container [spaceBetween]="20" [slidesPerView]="2.3">
     <ng-container *ngFor="let item of products; let i = index">
       <swiper-slide>
-        <app-product-card [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
-        </app-product-card>
+        <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+        </app-popular-product>
       </swiper-slide>
     </ng-container>
   </swiper-container>

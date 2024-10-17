@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card {
+    border: 2px solid #528ff4; /* Border color and width */
+    border-radius: 1rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    
+    /* Ensure all cards have the same height */
+    height: 200px; /* Fixed height for uniformity */
+    width: 150px; /* Fixed width for uniformity */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: flex-start; /* Start stacking from the top */
+    padding: 1rem; /* Add padding inside the card for spacing */
+    margin: 1rem; /* Margin to separate cards */
+    background-color: black; /* Black background for the card */
+  
+    /* Center content and image */
+    .card-content {
+      flex-grow: 1; /* Allow the content to fill available space */
+      display: flex; /* Use Flexbox for content alignment */
+      flex-direction: column; /* Stack content vertically */
+      justify-content: flex-start; /* Align content to the top */
+      text-align: center; /* Center text */
+      padding: 0.5rem; /* Add padding inside card content */
+      
+      h3.title {
+        font-size: 1rem; /* Smaller font size for title */
+        color: white; /* Title color */
+        margin: 0; /* Remove default margin */
+      }
+  
+      p {
+        font-size: 0.875rem; /* Smaller font size for paragraph */
+        color: #c7c7c7; /* Default text color */
+        margin: 0; /* Remove default margin */
+      }
+    }
+  
+    ion-img {
+      margin-bottom: 0.5rem; /* Adjust this value to reduce space below the image */
+    }
+  
+    &:hover {
+      transform: scale(1.05); /* Slightly enlarge the card on hover */
+    }
+  }
+  
+  /* Style for the image card */
+  .image-card {
+    background-color: #f3f3f3; /* Light gray background for the image card */
+    padding: 0.8rem; /* Padding around image */
+    border-radius: 1rem; /* Rounded corners */
+    margin-bottom: 0.5rem; /* Space below the image card */
+    
+    /* Ensure image card size is fixed */
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Center image in card */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+  
+    ion-img {
+      opacity: 0.8; /* Slightly transparent image */
+      width: 100%; /* Full width of image card */
+      height: 100%; /* Full height of image card */
+      object-fit: cover; /* Cover the entire image card area */
+    }
+  }
+  
+  .wrapper p {
+    color: #c7c7c7; /* Default text color */
+  }
+  
+  .wrapper.active {
+    .image-card {
+      background-color: #2055f4; /* Active background color */
+    }
+  
+    .image-card ion-img {
+      opacity: 1; /* Full opacity on active */
+    }
+  
+    p {
+      color: black; /* Text color on active */
+      font-weight: 600; /* Bold text on active */
+    }
+  }
+  
