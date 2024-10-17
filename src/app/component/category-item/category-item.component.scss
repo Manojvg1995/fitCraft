@@ -10,10 +10,18 @@
   padding: 0.8rem;
   border-radius: 1.5rem;
   margin-bottom: 0.5rem;
+
+  /* Set a specific width and height for the image card */
+  width: 80px; /* Adjust width as needed */
+  height: 80px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure overflow is hidden if image is larger */
 }
 
 .image-card ion-img {
   opacity: 0.8;
+  width: 100%; /* Make the image take full width of the card */
+  height: 100%; /* Make the image take full height of the card */
+  object-fit: cover; /* Ensure the image covers the card area */
 }
 
 .wrapper p {
@@ -30,7 +38,7 @@
   }
 
   p {
-    color: #1d1d1d;
+    color: #ffffff;
     font-weight: 600;
   }
 }

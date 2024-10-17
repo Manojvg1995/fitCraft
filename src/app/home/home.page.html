@@ -16,7 +16,7 @@
       (selectedCategoryEvent)="onCategorySelected($event)"></app-category-item>
   </div> -->
 
-  <swiper-container [spaceBetween]="20" [slidesPerView]="4.5">
+  <swiper-container [spaceBetween]="20" [slidesPerView]="3.5">
     <ng-container *ngFor="let category of categories">
       <swiper-slide>
         <app-category-item [item]="category" (selectedCategoryEvent)="onCategorySelected($event)">
@@ -26,6 +26,7 @@
   </swiper-container>
 
   <h1 class="list-header">Popular</h1>
+  <br>
   <swiper-container [spaceBetween]="20" [slidesPerView]="2">
     <ng-container *ngFor="let item of products; let i = index">
       <swiper-slide>

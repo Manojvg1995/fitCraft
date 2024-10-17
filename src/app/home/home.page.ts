@@ -63,20 +63,8 @@ export class HomePage {
       },
       {
         "id": 5,
-        "label": "Dhyana",
-        "image": "/assets/icon/meditation.png",
-        "active": false
-      },
-      {
-        "id": 6,
-        "label": "Dhyana",
-        "image": "/assets/icon/meditation.png",
-        "active": false
-      },
-      {
-        "id": 7,
-        "label": "Dhyana",
-        "image": "/assets/icon/meditation.png",
+        "label": "Products",
+        "image": "/assets/icon/running-shoes.png",
         "active": false
       }
     ];
