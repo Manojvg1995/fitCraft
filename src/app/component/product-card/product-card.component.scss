@@ -1,95 +1,95 @@
-.title {
-  font-weight: 600;
-  font-size: medium;
-  text-align: center;
-}
-
-.card-content {
-  text-align: center;
-}
-
-.card-image {
-  width: 100%;
-  height: 200px; /* Set the desired height */
-  object-fit: cover; /* Ensures the image covers the specified dimensions while maintaining its aspect ratio */
-  padding-top: 1rem;
-}
-
-.card {
-  width: 100%;
-  padding: 0.5rem;
-  background: #f3f3f3;
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin-bottom: 0.1rem;
-  border-radius: 1rem;
-  transition: background-color 0.3s; /* Smooth transition for color change */
+  text-align: center;
 }
 
-.card.selected {
-  background: #cfe3ff; /* Change to the desired selected color */
+.card {
+  border: 2px solid #528ff4; /* Border color and width */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+  
+  /* Ensure all cards have the same height */
+  height: 200px; /* Fixed height for uniformity */
+  width: 140px; /* Fixed width for uniformity */
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: flex-start; /* Start stacking from the top */
+  padding: 0.5rem; /* Reduce padding inside the card */
+  margin: 0.5rem; /* Reduce space between cards */
+  background-color: black; /* Black background for the card */
+
+  /* Center content and image */
+  .card-content {
+    flex-grow: 1; /* Allow the content to fill available space */
+    display: flex; /* Use Flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    text-align: center; /* Center text */
+    padding: 0.3rem; /* Reduce padding inside card content */
+    
+    h3.title {
+      font-size: 0.9rem; /* Smaller font size for title */
+      color: white; /* Title color */
+      margin: 0; /* Remove default margin */
+    }
+
+    p {
+      font-size: 0.8rem; /* Smaller font size for paragraph */
+      color: #c7c7c7; /* Default text color */
+      margin: 0; /* Remove default margin */
+    }
+  }
+
+  ion-img {
+    margin-bottom: 0.3rem; /* Adjust space below the image */
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+  }
 }
 
-.product-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+/* Style for the image card */
+.image-card {
+  background-color: #f3f3f3; /* Light gray background for the image card */
+  padding: 0.5rem; /* Reduce padding around the image */
+  border-radius: 1rem; /* Rounded corners */
+  margin-bottom: 0.3rem; /* Adjust space below the image card */
+  
+  /* Ensure image card size is fixed */
+  width: 70px; /* Fixed width */
+  height: 70px; /* Fixed height */
+  overflow: hidden; /* Hide overflow */
+  display: flex; /* Center image in card */
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+
+  ion-img {
+    opacity: 0.8; /* Slightly transparent image */
+    width: 100%; /* Full width of image card */
+    height: 100%; /* Full height of image card */
+    object-fit: cover; /* Cover the entire image card area */
+  }
 }
 
-ion-content {
-  --padding-start: 1rem;
-  --padding-end: 1rem;
+.wrapper p {
+  color: #c7c7c7; /* Default text color */
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-}
+.wrapper.active {
+  .image-card {
+    background-color: #2055f4; /* Active background color */
+  }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #515151;
-  margin: 0;
-}
+  .image-card ion-img {
+    opacity: 1; /* Full opacity on active */
+  }
 
-.avatar {
-  width: 35px;
-  height: 35px;
-  background-color: #2055f4;
-  border-radius: 50%;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-
-.avatar ion-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.space {
-  --padding-start: 1rem;
-  --padding-end: 1rem;
-}
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-}
-
-.list-header {
-  font-weight: 700;
-  color: #515151;
-  font-size: 1.6rem;
-  margin-bottom: 1.6rem;
-  margin-top: 2.5rem;
+  p {
+    color: black; /* Text color on active */
+    font-weight: 600; /* Bold text on active */
+  }
 }
