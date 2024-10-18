@@ -1,5 +1,5 @@
 .white-color {
-  background-color: #fff;
+  background-color: #000;
   /* white background */
 }
 
@@ -13,7 +13,7 @@
 .swiper-slide ion-card {
   margin: 0;
   /* Remove default margins */
-  background-color: white;
+  background-color: 000;
   /* Set background to white */
 }
 
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: 000;
   /* Set background to white */
   height: 200px;
   /* Adjust height as needed */
@@ -83,7 +83,7 @@ ion-header,
 ion-toolbar,
 ion-title,
 ion-tab-bar {
-  --background: white;
+  --background: 000;
   --color: black;
   /* Set text color to black */
   padding: 0 !important;
@@ -91,8 +91,8 @@ ion-tab-bar {
 }
 
 .profile-content {
-  --background: #FFF;
-  color: #fff;
+  --background: #000;
+  color: #000;
   text-align: center;
 }
 
@@ -116,11 +116,12 @@ ion-tab-bar {
   left: 50%;
   top: 24%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 5px solid #fff; /* Set the border to white */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Add a shadow effect */
+  object-fit: cover;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -331,7 +332,7 @@ ion-chip {
 
 .card-container {
   text-align: center;
-  background-color: #FFF;
+  background-color: #000;
   /* Black background similar to the image */
   border-radius: 10px;
   padding: 20px 10px;
@@ -354,11 +355,13 @@ ion-chip {
 
 .trainer-name {
   font-size: 18px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .tokens-card {
   padding: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold; 
 }
 
 .tokens-header {
@@ -449,7 +452,7 @@ ion-chip {
     .reward-value {
       font-size: 24px;
       font-weight: bold;
-      color: #0d1117;
+      color: #ffffff;
       margin-bottom: 5px;
     }
 
@@ -479,7 +482,7 @@ ion-chip {
 
       ion-icon {
         font-size: 1.2em;
-        color: white;
+        color: 000;
       }
     }
 
@@ -500,6 +503,7 @@ ion-chip {
           height: 100%;
           object-fit: cover;
           border-radius: 10px;
+          object-position: top;
         }
       }
 
@@ -509,4 +513,54 @@ ion-chip {
       }
     }
   }
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.stat {
+  text-align: center;
+  color: #58a6ff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &.active {
+    background-color: #58a6ff;
+    color: white;
+  }
+
+  &:hover {
+    background-color: #d1d1d1;
+  }
+}
+
+.chart-container {
+  
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  height: 400px;
+
+  .chart {
+    display: block;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.reward-item {
+  border: 2px solid #58a6ff; /* Set the border width, style, and color */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  padding: 16px; /* Optional: Add padding inside the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }

@@ -1,13 +1,13 @@
 .product-list {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Use 1fr 1fr for two equal-width cards */
-    grid-gap: 0.1rem; /* Keep the gap small between the cards */
+    grid-gap: 0.05rem; /* Keep the gap small between the cards */
 }
 
 /* Increase the card width by specifying a larger fraction */
 @media (min-width: 600px) {
   .product-list {
-      grid-template-columns: 1fr 1fr; /* Adjust to control the width */
+      grid-template-columns: 0.5fr 0.5fr; /* Adjust to control the width */
   }
 }
 

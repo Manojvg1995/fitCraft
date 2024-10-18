@@ -7,10 +7,10 @@
 <ion-content class="profile-content">
   <!-- Main Image -->
   <div class="image-container">
-    <img src="assets/images/gym3.jpeg" alt="Main Image" class="main-image" />
+    <img src="assets/icon/ashikaGymWide.jpg" alt="Main Image" class="main-image" />
     <!-- Avatar Image -->
   </div>
-  <img src="assets/images/gym3.jpeg" alt="Avatar" class="avatar-image" />
+  <img src="assets/icon/ashika_dp.jpeg" alt="Avatar" class="avatar-image" />
   <div class="profile-info">
     <h2>Ashika Ranganath</h2>
     <p class="description">Profile Description</p>
@@ -27,6 +27,18 @@
       <ion-icon name="logo-twitter" class="social-icon"></ion-icon>
       <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
     </div>
+    
+
+    
+    
+    <div style="display: flex; justify-content: space-around; width: 100%; height: 400px;">
+      <div style="display: block; width: 350px; height: 350px; overflow: hidden;">
+        <canvas id="stepsCanvas"></canvas>
+        <p style="text-align: center;">Steps: 2200/4000</p>
+      </div>
+    </div>
+    
+
 
     <!-- Edit Profile Button -->
     <ion-button expand="block" class="edit-button" fill="outline">
@@ -50,63 +62,18 @@
       <p>following</p>
     </div>
   </div>
-  <div class="calorie-meter-container">
-    <!-- Calorie Gauge -->
-    <div class="gauge-container">
-      <div class="gauge-background"></div>
-      <div class="gauge-fill" [style.transform]="rotateGauge()"></div>
-      <div class="gauge-center">
-        <h2>{{ currentCalories }}<span>kcal</span></h2>
-        <p>from {{ maxCalories }}kcal</p>
-      </div>
-    </div>
-
-    <!-- Macros Gauges -->
-    <div class="macros-container">
-      <div class="macro">
-        <div class="macro-circle">
-          <svg>
-            <circle cx="50%" cy="50%" r="45%"></circle>
-            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(goal, maxGoal)">
-            </circle>
-          </svg>
-          <div class="macro-text">{{ goal }}kcal</div>
-        </div>
-        <p>Goal</p>
-      </div>
-
-      <div class="macro">
-        <div class="macro-circle">
-          <svg>
-            <circle cx="50%" cy="50%" r="45%"></circle>
-            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(protein, maxProtein)">
-            </circle>
-          </svg>
-          <div class="macro-text">{{ protein }}g</div>
-        </div>
-        <p>Protein</p>
-      </div>
-
-      <div class="macro">
-        <div class="macro-circle">
-          <svg>
-            <circle cx="50%" cy="50%" r="45%"></circle>
-            <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="calculateStrokeDashOffset(fat, maxFat)">
-            </circle>
-          </svg>
-          <div class="macro-text">{{ fat }}g</div>
-        </div>
-        <p>Fat</p>
-      </div>
-    </div>
+  <div>
+    <app-speedometer></app-speedometer>
   </div>
+  
+  
   <ion-item lines="none">
     <ion-label class="main-lable-heading">
       NFTs I offer for now
     </ion-label>
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <swiper-container [spaceBetween]="20" [slidesPerView]="2">
+  <swiper-container [spaceBetween]="20" [slidesPerView]="2.8">
     <ng-container *ngFor="let item of products; let i = index">
       <swiper-slide>
         <app-product-card [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
@@ -124,22 +91,22 @@
     <div class="section">
       <div class="thumbnail-grid">
         <div class="grid-item grid-item-large">
-          <img src="assets/images/gym2.jpeg" alt="Photo 1" />
+          <img src="assets/images/ashika1.jpeg" alt="Photo 1" />
         </div>
         <div class="grid-item">
-          <img src="assets/images/gym2.jpeg" alt="Photo 2" />
+          <img src="assets/images/ashika2.jpeg" alt="Photo 2" />
         </div>
         <div class="grid-item">
-          <img src="assets/images/gym2.jpeg" alt="Photo 3" />
+          <img src="assets/images/ashika3.jpeg" alt="Photo 3" />
         </div>
         <div class="grid-item">
-          <img src="assets/images/gym2.jpeg" alt="Photo 4" />
+          <img src="assets/images/ashika4.jpeg" alt="Photo 4" />
         </div>
         <div class="grid-item">
-          <img src="assets/images/gym2.jpeg" alt="Photo 5" />
+          <img src="assets/images/ashika5.jpeg" alt="Photo 5" />
         </div>
         <div class="grid-item">
-          <img src="assets/images/gym2.jpeg" alt="Photo 6" />
+          <img src="assets/images/ashika6.jpeg" alt="Photo 6" />
         </div>
       </div>
     </div>
@@ -161,8 +128,8 @@
               <ion-card-content>
                 <div>
                   <ion-text color="primary">Calories Burnt</ion-text>
-                  <ion-icon name="flame"></ion-icon>
-                  <ion-text color="primary">18,900</ion-text>
+                  <ion-icon name="flame">400</ion-icon>
+                  <ion-text color="primary">1,890</ion-text>
                 </div>
                 <div>
                   <ion-text>Luck 60%</ion-text>
@@ -179,14 +146,14 @@
               <ion-card-content>
                 <div>
                   <ion-text color="primary">Calories Burnt</ion-text>
-                  <ion-icon name="flame"></ion-icon>
-                  <ion-text color="primary">0</ion-text>
+                  <ion-icon name="flame">400</ion-icon>
+                  <ion-text color="primary">2,100</ion-text>
                 </div>
                 <div>
-                  <ion-text>Luck 50%</ion-text>
+                  <ion-text>Luck 23%</ion-text>
                 </div>
                 <div>
-                  <ion-text>0 steps</ion-text>
+                  <ion-text>18,456 steps</ion-text>
                 </div>
               </ion-card-content>
             </ion-card>
@@ -222,13 +189,13 @@
                 <div>
                   <ion-text color="primary">Calories Burnt</ion-text>
                   <ion-icon name="flame"></ion-icon>
-                  <ion-text color="primary">0</ion-text>
+                  <ion-text color="primary">18,900</ion-text>
                 </div>
                 <div>
-                  <ion-text>Luck 50%</ion-text>
+                  <ion-text>Luck 60%</ion-text>
                 </div>
                 <div>
-                  <ion-text>0 steps</ion-text>
+                  <ion-text>62,054 steps</ion-text>
                 </div>
               </ion-card-content>
             </ion-card>
@@ -245,7 +212,7 @@
           <ion-col size="6">
             <div class="card-container">
               <div class="trainer-title">My Gym Trainer</div>
-              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Rocky">
+              <img src="assets/images/gum_trainer.jpeg" class="trainer-image" alt="Rocky">
               <div class="trainer-name">Rocky</div>
             </div>
           </ion-col>
@@ -254,7 +221,7 @@
           <ion-col size="6">
             <div class="card-container">
               <div class="trainer-title">My Yoga Guru</div>
-              <img src="assets/images/gym2.jpeg" class="trainer-image" alt="Julie">
+              <img src="assets/images/yoga_trainer.jpeg" class="trainer-image" alt="Julie">
               <div class="trainer-name">Julie</div>
             </div>
           </ion-col>
