@@ -60,32 +60,62 @@
   <div class="space">
     <app-searchbar></app-searchbar>
   </div>
-  <h1 class="list-header">FitCraft workout</h1>
-  <br>
-  <div>
-    <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
-      <ng-container *ngFor="let item of products; let i = index">
-        <swiper-slide>
-          <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
-          </app-popular-product>
-        </swiper-slide>
-      </ng-container>
-    </swiper-container>
+  
+  <div *ngIf="selectedTab === 'gymCraft'">
+    <h1 class="list-header">FitCraft workout</h1>
+    <br>
+    <div>
+      <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
+        <ng-container *ngFor="let item of fitCraftWorkOutList; let i = index">
+          <swiper-slide>
+            <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+            </app-popular-product>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+    </div>
+  
+    <h1 class="list-header">Popular Premiuim workout</h1>
+    <br>
+    <div>
+      <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
+        <ng-container *ngFor="let item of popularPremiumWorkOutList; let i = index">
+          <swiper-slide>
+            <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+            </app-popular-product>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+    </div>
   </div>
 
-  <h1 class="list-header">Popular Premiuim workout</h1>
-  <br>
-  <div>
-    <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
-      <ng-container *ngFor="let item of products; let i = index">
-        <swiper-slide>
-          <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
-          </app-popular-product>
-        </swiper-slide>
-      </ng-container>
-    </swiper-container>
+  <div *ngIf="selectedTab === 'yogaCraft'">
+    <h1 class="list-header">Top Yogasanas</h1>
+    <br>
+    <div>
+      <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
+        <ng-container *ngFor="let item of topYogaList; let i = index">
+          <swiper-slide>
+            <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+            </app-popular-product>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+    </div>
+  
+    <h1 class="list-header">Popular Premiuim Yogasanas</h1>
+    <br>
+    <div>
+      <swiper-container [spaceBetween]="10" [slidesPerView]="2.3">
+        <ng-container *ngFor="let item of popularYogaList; let i = index">
+          <swiper-slide>
+            <app-popular-product [item]="item" [selected]="selectedCardIndex === i" (selectedValue)="onCardSelect($event, i)">
+            </app-popular-product>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+    </div>
   </div>
-
   <!-- <div class="product-list">
     <app-product-card *ngFor="let item of products; let i = index" [item]="item" [selected]="selectedCardIndex === i"
       (selectedValue)="onCardSelect($event, i)">

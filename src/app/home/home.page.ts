@@ -109,7 +109,7 @@ export class HomePage {
       title: "Yoga Live Class",
       price: 900,
       priceDesciption:"/month",
-      image: "/assets/images/yogaliveclass1.jpeg",
+      image: "/assets/images/_aaaliveyoga1.jpeg",
       description: "Get access to our state-of-the-art gym equipment and expert trainers"
     },
     {
@@ -117,16 +117,8 @@ export class HomePage {
       title: "Dhyana Live Class",
       price: 700,
       priceDesciption:"/month",
-      image: "/assets/images/gym2.jpeg",
+      image: "/assets/images/_aaaliveyoga2.jpeg",
       description: "Work one-on-one with our certified trainers to achieve your fitness goals"
-    },
-    {
-      id: 3,
-      title: "Super Meditation",
-      price: 2100,
-      priceDesciption:"/6month",
-      image: "/assets/images/yogaliveclass2.jpeg",
-      description: "Join our expert instructors for a variety of yoga classes"
     }
   ]
 
@@ -136,7 +128,7 @@ export class HomePage {
       title: "Daily Work Out",
       price: 900,
       priceDesciption:"/month",
-      image: "/assets/images/gym4.jpeg",
+      image: "/assets/images/_aaaworkoutLive1.jpeg",
       description: "Get access to our state-of-the-art gym equipment and expert trainers"
     },
     {
@@ -144,7 +136,83 @@ export class HomePage {
       title: "Get Set THIN",
       price: 700,
       priceDesciption:"/month",
-      image: "/assets/images/gym4.jpeg",
+      image: "/assets/images/_aaaworkoutLive32.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    }
+  ]
+
+  fitCraftWorkOutList =  [
+    {
+      id: 1,
+      title: "Quick ab burner",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaafitcraftworkouts1.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Arms and back",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaafitcraftworkouts2.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    }
+  ]
+
+  popularPremiumWorkOutList =  [
+    {
+      id: 1,
+      title: "Weight Loss",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaagympremium1.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Cardio for Beginners",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaagympremium2.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    }
+  ]
+
+  topYogaList =  [
+    {
+      id: 1,
+      title: "Yoga for Flexibility",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaatopyogasanas1.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Hatha Yoga",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaatopyogasanas2.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    }
+  ]
+
+  popularYogaList =  [
+    {
+      id: 1,
+      title: "Yoga for Backpain",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaapremiumyogasanas2.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Awake your kundalini",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/_aaapremiumyogasanas1.jpeg",
       description: "Work one-on-one with our certified trainers to achieve your fitness goals"
     }
   ]
