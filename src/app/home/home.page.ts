@@ -20,7 +20,7 @@ export class HomePage {
   categories: Category[] = [];
   products: Product[] = [];
   selectedCard: any = null;
-
+  
   constructor(private productService: ProductService,
     private router: Router,
     private navCtrl: NavController
@@ -91,4 +91,61 @@ export class HomePage {
       event.target.complete();
     }, 2000);
   }
+
+  selectedTab: string = 'gymCraft'; // Default selected tab
+  selectedSubTab: string = 'discover'
+  selectTab(tab: string) {
+    this.selectedTab = tab;
+    // You can add additional logic to handle tab changes, such as loading content specific to the selected tab.
+  }
+
+  selecteSubTab(selectedSubTab: string){
+    this.selectedSubTab = selectedSubTab;
+  }
+
+  yogaLiveClassList = [
+    {
+      id: 1,
+      title: "Yoga Live Class",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/yogaliveclass1.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Dhyana Live Class",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/gym2.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    },
+    {
+      id: 3,
+      title: "Super Meditation",
+      price: 2100,
+      priceDesciption:"/6month",
+      image: "/assets/images/yogaliveclass2.jpeg",
+      description: "Join our expert instructors for a variety of yoga classes"
+    }
+  ]
+
+  gymLiveClassList =  [
+    {
+      id: 1,
+      title: "Daily Work Out",
+      price: 900,
+      priceDesciption:"/month",
+      image: "/assets/images/gym4.jpeg",
+      description: "Get access to our state-of-the-art gym equipment and expert trainers"
+    },
+    {
+      id: 2,
+      title: "Get Set THIN",
+      price: 700,
+      priceDesciption:"/month",
+      image: "/assets/images/gym4.jpeg",
+      description: "Work one-on-one with our certified trainers to achieve your fitness goals"
+    }
+  ]
 }

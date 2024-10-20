@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
         this.headerName = 'Feed';
         break;
       case '/pages/home':
-          this.headerName = 'Home';
+          this.headerName = 'Craft';
           break;
       case '/pages/profile':
           this.headerName = 'Profile';
@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
             this.headerName = 'Cart';
             break;
       case '/pages/product-listing':
-        this.headerName = 'Store';
+        this.headerName = 'Market Place';
         break;
       default:
         this.headerName = 'Default Title';

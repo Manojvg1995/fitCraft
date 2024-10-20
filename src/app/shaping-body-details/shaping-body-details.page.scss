@@ -122,3 +122,8 @@ ion-content {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.nftImage {
+  transform: scale(0.8); /* Scale down to 80% */
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}

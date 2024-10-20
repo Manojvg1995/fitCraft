@@ -122,6 +122,7 @@ ion-tab-bar {
   border: 5px solid #fff; /* Set the border to white */
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Add a shadow effect */
   object-fit: cover;
+  object-position: top;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -458,7 +459,7 @@ ion-chip {
 
     .reward-label {
       font-size: 14px;
-      color: #666;
+      color: #ffffff;
     }
   }
 }

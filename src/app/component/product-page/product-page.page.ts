@@ -46,4 +46,8 @@ export class ProductPagePage {
     }, 2000);
   }
 
+  navigateToPlaceOrderPage(){
+    this.router.navigate(['/pages/book-product']);
+  }
+
 }

@@ -16,3 +16,84 @@
       grid-template-columns: 1fr 1fr; /* Adjust to increase the width on larger screens */
   }
 }
+
+.black-toolbar {
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+  --padding-start: 0; /* Remove default padding */
+  --padding-end: 0; /* Remove default padding */
+}
+
+.black-toolbar h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2em; /* Optional: Adjust font size as needed */
+}
+.black-toolbar {
+  background: linear-gradient(90deg, #000, #444); /* Gradient from black to dark gray */
+  color: white; /* Text color */
+  --padding-start: 0; /* Remove default padding */
+  --padding-end: 0; /* Remove default padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+}
+
+.black-toolbar h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Increase font size */
+  font-weight: bold; /* Make the font bold */
+  text-align: center; /* Center the text */
+  color: white; /* Text color */
+}
+
+.custom-tab-bar {
+  display: flex; /* Flexbox for layout */
+  background-color: #000000; /* Background color of the tab bar */
+  padding: 10px 0; /* Padding for the tab bar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  width: 100%;
+}
+
+.custom-tab-button {
+  flex: 1; /* Flex for even distribution */
+  text-align: center; /* Center text */
+  color: white; /* Default text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+  padding: 10px 0; /* Padding for tab buttons */
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  }
+
+  &.tab-selected {
+    background-color: #444; /* Background for selected tab */
+    color: #528ff4; /* Highlight color for selected tab text */
+    border-radius: 10px; /* Rounded corners for selected tab */
+  }
+
+  h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Font size */
+    font-weight: bold; /* Make the font bold */
+  }
+}
+
+.top-space {
+    padding-top: 4rem;
+}
+
+.live-icon {
+  color: #f2ff00; /* Red color for the live icon */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle; /* Align the icon vertically with the text */
+}
+
+.live-badge {
+  background-color: red; /* Red background for Live badge */
+  color: white; /* White font color */
+  padding: 4px 8px; /* Padding around the text */
+  border-radius: 12px; /* Rounded corners */
+  font-weight: bold; /* Make the text bold */
+  margin-left: 5px; /* Space between icon and badge */
+  display: inline-block; /* Ensure it behaves like a block */
+  font-size: 0.9em; /* Font size for the badge */
+}
