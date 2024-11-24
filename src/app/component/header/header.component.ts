@@ -9,6 +9,7 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   headerName!: string;
+  backFlag :boolean = true;
   constructor(private router: Router) {}
   
   ngOnInit() {
@@ -20,19 +21,24 @@ export class HeaderComponent implements OnInit {
   }
 
   private updateTitle() {
+    this.backFlag = true;
     console.log(this.router.url)
     const currentUrl = this.router.url;
     switch (currentUrl) {
       case '/home':
         this.headerName = 'Home Page';
+        this.backFlag = false;
         break;
       case '/pages/feed':
+        this.backFlag = false;
         this.headerName = 'Feed';
         break;
       case '/pages/home':
+          this.backFlag = false;
           this.headerName = 'Craft';
           break;
       case '/pages/profile':
+          this.backFlag = false;
           this.headerName = 'Profile';
           break;
       case '/pages/book-product':
@@ -42,7 +48,7 @@ export class HeaderComponent implements OnInit {
             this.headerName = 'Cart';
             break;
       case '/pages/product-listing':
-        this.headerName = 'Market Place';
+        this.headerName = "Explore NFT's";
         break;
       default:
         this.headerName = 'Default Title';

@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="backToHome()">
-        <ion-icon slot="icon-only" color="dark" name="arrow-back"></ion-icon>
+        <ion-icon slot="icon-only" *ngIf="backFlag" color="dark" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title class="title">{{headerName}}</ion-title>

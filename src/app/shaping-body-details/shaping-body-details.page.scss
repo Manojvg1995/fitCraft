@@ -127,3 +127,10 @@ ion-content {
   transform: scale(0.8); /* Scale down to 80% */
   transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
+
+.image-edit {
+  height: 15px; /* Adjust the height as needed */
+  width: auto;   /* Ensure width scales proportionally */
+  object-fit: cover; /* This will crop the image if necessary to fit the specified height */
+  object-position: center; /* This will center the image */
+}

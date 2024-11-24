@@ -1,3 +1,23 @@
+/* Ensure the entire content area has a black background */
+ion-content {
+  --background: #000000; /* Ionic's background variable */
+  background-color: #000000 !important; /* Force black background */
+}
+
+/* Ensure Ion-card and its children are styled properly */
+ion-card {
+  background-color: #000000; /* Black background for the card */
+  color: #ffffff; /* White text */
+  --ion-background-color: #000000; /* Override Ionic's default card background */
+}
+
+ion-item {
+  --background: #000000; /* Black background */
+  background-color: #000000 !important; /* Ensure the black background is applied */
+  color: #ffffff; /* White text for content */
+}
+
+/* Style for images */
 ion-img {
   width: 100%;
   height: 25rem;
@@ -5,43 +25,42 @@ ion-img {
   object-position: top;
 }
 
+/* Text styles for captions and hashtags */
 .caption,
 .hashtag {
-  display: block; /* Ensures each appears on a new line */
-  text-align: center; /* Center align text */
+  display: block;
+  text-align: center;
   margin: 0.5rem 0;
 }
 
 .caption {
-  color: #528ff4; /* Caption color */
+  color: #528ff4; /* Blue for captions */
   font-size: 1rem;
-}
-
-.content {
-  text-align: center; /* Center align content */
-  width: 100%; /* Ensures full width for centering */
 }
 
 .hashtag {
-  color: #59c745; /* Hashtag color */
+  color: #59c745; /* Green for hashtags */
   font-size: 1rem;
 }
 
-ion-item {
-  --padding-start: 0; /* Removes default padding in ion-item */
-  display: flex;
-  justify-content: space-between;
+/* Content wrapper styling */
+.content {
+  text-align: center;
+  background-color: #000000 !important;
+  color: #ffffff;
 }
 
+/* Top space padding */
 .top-space {
   padding-top: 3rem;
 }
 
+/* Optional box styling */
 .box-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #000000;
 }
 
 .box {
@@ -51,41 +70,39 @@ ion-item {
   font-weight: bold;
   margin-right: 0.5rem;
   text-align: center;
-  border: 2px solid; /* Add border */
+  border: 2px solid;
+  background-color: transparent;
 }
 
 .blue-box {
-  border-color: #528ff4; /* Blue border */
-  color: #528ff4; /* Blue text */
-  background-color: transparent; /* No fill */
+  border-color: #528ff4;
+  color: #528ff4;
   font-size: 0.8rem;
 }
 
 .green-box {
-  border-color: #59c745; /* Green border */
-  color: #59c745; /* Green text */
-  background-color: transparent; /* No fill */
+  border-color: #59c745;
+  color: #59c745;
   font-size: 0.8rem;
 }
 
 .red-box {
-  border-color: #f45b5b; /* Red border */
-  color: #f45b5b; /* Red text */
-  background-color: transparent; /* No fill */
+  border-color: #f45b5b;
+  color: #f45b5b;
   font-size: 0.8rem;
 }
 
-/* Optional: For when the theme toggles */
+/* Dark mode improvements */
 .dark-mode {
   .caption,
   .hashtag {
-    color: white; /* Change text color for dark mode */
+    color: white;
   }
 
   .blue-box,
   .green-box,
   .red-box {
-    border-color: white; /* Change border color for dark mode */
-    color: white; /* Change text color for dark mode */
+    border-color: white;
+    color: white;
   }
 }

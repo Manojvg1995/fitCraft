@@ -1,99 +1,134 @@
-.product-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Use 1fr 1fr for two equal-width cards */
-    grid-gap: 0.05rem; /* Keep the gap small between the cards */
+/* Set the background color for the entire content */
+ion-content {
+  --background: #000000; /* Ionic's variable for background */
+  background-color: #000000 !important; /* Force black background */
+  color: white; /* Set default text color to white */
 }
 
-/* Increase the card width by specifying a larger fraction */
+/* Tab bar styling */
+.custom-tab-bar {
+  display: flex;
+  background-color: #000000; /* Black background */
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+}
+
+.custom-tab-button {
+  flex: 1;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px 0;
+}
+
+.custom-tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+.custom-tab-button.tab-selected {
+  background-color: #444; /* Dark gray for selected tab */
+  color: #528ff4; /* Highlight color for selected tab */
+  border-radius: 10px;
+}
+
+.custom-tab-button h1 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Styling for headers */
+h1.list-header,
+h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Live badge styling */
+.live-badge {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.live-icon {
+  color: #f2ff00; /* Yellow flame icon */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Swiper container styling */
+swiper-container {
+  width: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product list styling */
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
 @media (min-width: 600px) {
   .product-list {
-      grid-template-columns: 0.5fr 0.5fr; /* Adjust to control the width */
+    grid-template-columns: 0.5fr 0.5fr;
   }
 }
 
 @media (min-width: 800px) {
   .product-list {
-      grid-template-columns: 1fr 1fr; /* Adjust to increase the width on larger screens */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Toolbar styling */
 .black-toolbar {
-  background-color: black; /* Set background color to black */
-  color: white; /* Set text color to white */
-  --padding-start: 0; /* Remove default padding */
-  --padding-end: 0; /* Remove default padding */
+  background: linear-gradient(90deg, #000, #444);
+  color: white;
+  --padding-start: 0;
+  --padding-end: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .black-toolbar h1 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.2em; /* Optional: Adjust font size as needed */
-}
-.black-toolbar {
-  background: linear-gradient(90deg, #000, #444); /* Gradient from black to dark gray */
-  color: white; /* Text color */
-  --padding-start: 0; /* Remove default padding */
-  --padding-end: 0; /* Remove default padding */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
-.black-toolbar h1 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5em; /* Increase font size */
-  font-weight: bold; /* Make the font bold */
-  text-align: center; /* Center the text */
-  color: white; /* Text color */
-}
-
-.custom-tab-bar {
-  display: flex; /* Flexbox for layout */
-  background-color: #000000; /* Background color of the tab bar */
-  padding: 10px 0; /* Padding for the tab bar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  width: 100%;
-}
-
-.custom-tab-button {
-  flex: 1; /* Flex for even distribution */
-  text-align: center; /* Center text */
-  color: white; /* Default text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth background transition */
-  padding: 10px 0; /* Padding for tab buttons */
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
-  }
-
-  &.tab-selected {
-    background-color: #444; /* Background for selected tab */
-    color: #528ff4; /* Highlight color for selected tab text */
-    border-radius: 10px; /* Rounded corners for selected tab */
-  }
-
-  h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 1.2em; /* Font size */
-    font-weight: bold; /* Make the font bold */
-  }
-}
-
+/* Top space padding */
 .top-space {
-    padding-top: 4rem;
+  padding-top: 4rem;
 }
 
-.live-icon {
-  color: #f2ff00; /* Red color for the live icon */
-  margin-right: 8px; /* Space between icon and text */
-  vertical-align: middle; /* Align the icon vertically with the text */
+/* Space between components */
+.space {
+  padding: 1rem 0;
 }
 
-.live-badge {
-  background-color: red; /* Red background for Live badge */
-  color: white; /* White font color */
-  padding: 4px 8px; /* Padding around the text */
-  border-radius: 12px; /* Rounded corners */
-  font-weight: bold; /* Make the text bold */
-  margin-left: 5px; /* Space between icon and badge */
-  display: inline-block; /* Ensure it behaves like a block */
-  font-size: 0.9em; /* Font size for the badge */
+/* Search bar styling */
+app-searchbar {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #222; /* Dark background */
+  color: white;
+  border-radius: 8px;
 }

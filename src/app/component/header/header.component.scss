@@ -1,15 +1,15 @@
 ion-header {
   --padding-start: 2rem;
   --padding-end: 2rem;
-  background-color: white;
+  background: linear-gradient(90deg, #000, #444); /* Gradient from black to dark gray */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  box-shadow: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
   border-bottom: none;
-  height: 70px; /* Increased header height */
+  height: 70px; /* Header height */
 }
 
 ion-toolbar {
@@ -18,16 +18,18 @@ ion-toolbar {
   align-items: center;
   position: relative;
   height: 100%; /* Fill the header height */
+  color: white; /* Default text color */
 }
 
 ion-title {
-  font-size: 1.8rem; /* Increased title font size */
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 1.8rem; /* Title font size */
+  font-weight: bold; /* Bold title text */
+  color: #79d7ff; /* Accent color for title */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle text shadow */
 }
 
 ion-buttons[slot="start"] {
@@ -46,25 +48,26 @@ ion-buttons[slot="end"] {
 }
 
 .avatar {
-  width: 45px; /* Increased avatar size */
-  height: 45px;
-  background-color: #2055f4;
-  border-radius: 50%;
+  width: 50px; /* Adjusted avatar size */
+  height: 50px;
+  background-color: #2055f4; /* Blue background for avatar */
+  border-radius: 50%; /* Circular shape */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden; /* Ensure image fits within avatar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for depth */
 }
 
 .avatar ion-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: cover; /* Ensure image covers the entire avatar */
+  object-position: top; /* Focus on the top portion of the image */
+  border-radius: 50%; /* Maintain circular shape */
 }
 
-
-.avatar-image{
+.avatar-image {
   object-fit: cover;
   object-position: top;
 }
