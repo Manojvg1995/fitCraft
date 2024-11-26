@@ -37,29 +37,34 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import "@ionic/angular/css/palettes/dark.system.css";
-@import '@ionic/angular/css/palettes/dark.always.css';
+@import "@ionic/angular/css/palettes/dark.always.css";
 
-*{
-    font-family: Gilroy;
+body,
+ion-app {
+  background-color: #000 !important;
 }
 
-.form-field{
-    display: flex;
-    align-items: center;
-    background-color: black;
-    height: 5.4vh;
-    border-radius: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 1rem;
+* {
+  font-family: Gilroy;
+}
 
-    ion-icon{
-        color: var(--ion-color-dark-tint);
-        font-size: 1.1 rem;
-        margin-right: 10px;
-    }
+.form-field {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 5.4vh;
+  border-radius: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 1rem;
 
-    ion-input{
-        font-family: Gilroy;
-    }
+  ion-icon {
+    color: var(--ion-color-dark-tint);
+    font-size: 1.1 rem;
+    margin-right: 10px;
+  }
+
+  ion-input {
+    font-family: Gilroy;
+  }
 }

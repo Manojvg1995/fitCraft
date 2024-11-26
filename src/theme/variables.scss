@@ -1,24 +1,26 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../assets/fonts/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  *{
-    font-family: "Open Sans";
-  } 
+* {
+  font-family: "Open Sans";
+}
 
-  :root {
-    --ion-color-sand: #e1c48d;
-    --ion-color-sand-rgb: 225, 196, 141;
-    --ion-color-sand-contrast: #000000;
-    --ion-color-sand-contrast-rgb: 0, 0, 0;
-    --ion-color-sand-shade: #c6a571;
-    --ion-color-sand-tint: #e7d2a1;
-    --ion-color-primary: #528ff4; /* Primary color */
-    --ion-color-primary-rgb: 82, 143, 244; /* RGB value for the primary color */
-    --ion-color-primary-contrast: #fff; /* Contrast color for text */
-  }
+:root {
+  --ion-background-color: #000000;
+  --ion-toolbar-background: #111111; /* Toolbar background */
+  --ion-color-sand: #e1c48d;
+  --ion-color-sand-rgb: 225, 196, 141;
+  --ion-color-sand-contrast: #000000;
+  --ion-color-sand-contrast-rgb: 0, 0, 0;
+  --ion-color-sand-shade: #c6a571;
+  --ion-color-sand-tint: #e7d2a1;
+  --ion-color-primary: #528ff4; /* Primary color */
+  --ion-color-primary-rgb: 82, 143, 244; /* RGB value for the primary color */
+  --ion-color-primary-contrast: #fff; /* Contrast color for text */
+}
