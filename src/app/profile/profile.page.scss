@@ -1,7 +1,7 @@
 // Variables for colors and spacing
 $primary-color: #3880ff;
 $secondary-color: #f4f4f4;
-$card-bg-color: rgb(0, 0, 0);
+$card-bg-color: #000000;
 $text-color: #ffffff;
 $border-radius: 10px;
 $padding: 16px;
@@ -85,18 +85,6 @@ $padding: 16px;
 .icon-wrapper p {
   font-size: 14px;
   text-transform: lowercase;
-}
-
-ion-content,
-ion-header,
-ion-toolbar,
-ion-title,
-ion-tab-bar {
-  --background: 000;
-  --color: black;
-  /* Set text color to black */
-  padding: 0 !important;
-  /* Remove any default padding */
 }
 
 .profile-content {
@@ -593,4 +581,19 @@ button {
   height: 100px !important; /* Adjust height as per your layout needs */
   object-fit: cover;
   object-position: center; /* Center the image instead of top */
+}
+
+/* Set the background color to black for common elements */
+ion-content,
+section,
+ion-list,
+ion-item,
+ion-label {
+  background-color: #000000;
+}
+
+.thumbnail-container[_ngcontent-ng-c1039415942] {
+  background-color: #000000; /* Black background */
+  padding: 10px;
+  color: white;
 }

@@ -192,8 +192,13 @@ ion-content {
 }
 
 // Apply black background to the entire section
-ion-content {
-  background-color: #000000; // Set the background of the content area to black
+/* Set the background color to black for common elements */
+ion-content,
+section,
+ion-list,
+ion-item,
+ion-label {
+  background-color: #000000;
 }
 
 ion-item {

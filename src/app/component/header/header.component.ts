@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
         break;
       case '/pages/feed':
         this.backFlag = false;
-        this.headerName = 'Feed';
+        this.headerName = 'FitCraft';
         break;
       case '/pages/home':
           this.backFlag = false;
